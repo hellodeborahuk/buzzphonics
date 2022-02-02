@@ -5,7 +5,9 @@
 I want to create a phonics sound page that I can save on my phone and have to hand when reading with my daughter who's just started learning to read. I often need to find out what a certain sound is and end up googling it every time. I need something quick and easy to click on. 
 
 Simple idea - a list of sounds to listen to
+
 Small stretch goal - flip whole page and it has images (e.g fox for f) instead of the letter
+
 Stretch goal - login and track progress through the sounds
 
 ## Design
