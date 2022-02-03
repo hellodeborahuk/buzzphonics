@@ -6,7 +6,8 @@ const PhaseTwo = () => {
     const sounds = [
         {
             letter: "s",
-            sound: "/"
+            sound: "/",
+            icon: "sun"
         },
         {
             letter: "a",
@@ -90,10 +91,6 @@ const PhaseTwo = () => {
         },
         {
             letter: "ll",
-            sound: "/"
-        },
-        {
-            letter: "s",
             sound: "/"
         },
         {

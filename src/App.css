@@ -95,3 +95,7 @@ header {
   font-size: 2rem;
   font-weight: 600;
 }
+
+.sound-icon {
+  width: 30px; 
+}
