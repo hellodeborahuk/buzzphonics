@@ -32,6 +32,11 @@ const PhaseTwo = () => {
             index: 3
         },
     ]
+
+    const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
+
+    // if backgroundColor =  yellow or lightblue then color is darkblue
+
     return ( 
         <section>
             <h1>Phase Two</h1>
