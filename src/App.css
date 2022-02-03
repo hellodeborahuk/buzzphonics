@@ -50,6 +50,8 @@ header {
     padding: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     transition: all .2s ease-in-out;
 }
 
@@ -66,9 +68,9 @@ header {
 }
 
 .dove, .feather {
-align-self: flex-end;  
 margin-top: auto;
   font-size: 3.5rem;
+  align-self: flex-end;
 }
 
 /* ============== PHASE TWO ============= */
