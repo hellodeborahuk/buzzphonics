@@ -17,11 +17,14 @@ function App() {
                       <FaDove className="dove"/>
                   </div>
                   </Link>
+                  <Link to="phaseThree">
                   <div className="phase-three">
                       <h2>Phase 3</h2>
                       <p>25 Letters</p>
                       <FaFeatherAlt className="feather" />
                   </div>
+                  </Link>
+
               </section>
 
           </main>

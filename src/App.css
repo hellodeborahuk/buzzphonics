@@ -27,6 +27,12 @@ h1 {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color:white;
+}
+
+
 
 .phase-two, .phase-three {
     border-radius: 16px;
@@ -36,6 +42,11 @@ h1 {
     padding: 1em;
     display: flex;
     flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.phase-two:hover, .phase-three:hover  {
+  transform: scale(1.1);
 }
 
 .phase-two {
@@ -60,19 +71,21 @@ margin-top: auto;
   justify-content: center;
   align-items: center;
   margin: 2em auto;
-  gap: 1em;
+  gap: 0.75em;
   width: 200px;
 }
 
 .sound {
   background-color: var(--pink);
-  padding: 1em;
-  text-align: center;
   border-radius: 16px;
-  width: 25%;
+  width: 28%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .sound p {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  padding-bottom: 4px;
 }

@@ -1,4 +1,4 @@
-const PhaseTwo = () => {
+const PhaseThree = () => {
 
     const sounds = [
         {
@@ -104,7 +104,7 @@ const PhaseTwo = () => {
 
     return ( 
         <section>
-            <h1>Phase Two</h1>
+            <h1>Phase Three</h1>
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {
@@ -119,4 +119,4 @@ const PhaseTwo = () => {
      );
 }
  
-export default PhaseTwo;
+export default PhaseThree;
