@@ -40,6 +40,14 @@ header {
   position: absolute;
   top: 8px;
   left: 0;
+  font-size: 1.25rem;
+}
+
+.toggle {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  font-size: 1.25rem;
 }
 
 .phase-two, .phase-three {
@@ -50,6 +58,7 @@ header {
     padding: 1em;
     display: flex;
     transition: all .2s ease-in-out;
+    
 }
 
 .phase-two:hover, .phase-three:hover  {
@@ -94,8 +103,10 @@ header {
 .sound p {
   font-size: 2rem;
   font-weight: 600;
+  color: black;
 }
 
 .sound-icon {
   width: 30px; 
+  padding: 6px 0;
 }
