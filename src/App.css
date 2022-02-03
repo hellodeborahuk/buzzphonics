@@ -11,9 +11,10 @@
 }
 
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  max-width: 375px;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
 h1 {
   text-align: center;
 }
+
 
 .phase-two, .phase-three {
     border-radius: 16px;
@@ -45,7 +47,32 @@ h1 {
 }
 
 .dove, .feather {
-  align-self: flex-end;
-  margin-top: auto;
+align-self: flex-end;  
+margin-top: auto;
   font-size: 3.5rem;
+}
+
+/* ============== PHASE TWO ============= */
+
+.sound-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  gap: 1em;
+  width: 200px;
+}
+
+.sound {
+  background-color: var(--pink);
+  padding: 1em;
+  text-align: center;
+  border-radius: 16px;
+  width: 25%;
+}
+
+.sound p {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
