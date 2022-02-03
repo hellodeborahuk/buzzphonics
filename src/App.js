@@ -12,17 +12,21 @@ function App() {
               <section>
                   <Link to="phaseTwo">
                     <div className="phase-two">
-                      <h2>Phase 2</h2>
-                      <p>19 Letters</p>
+                      <div>
+                        <h2>Phase 2</h2>
+                        <p>19 Letters</p>
+                      </div>
                       <FaDove className="dove"/>
-                  </div>
+                    </div>
                   </Link>
                   <Link to="phaseThree">
                   <div className="phase-three">
-                      <h2>Phase 3</h2>
-                      <p>25 Letters</p>
+                      <div> 
+                        <h2>Phase 3</h2>
+                        <p>25 Letters</p>
+                      </div>
                       <FaFeatherAlt className="feather" />
-                  </div>
+                    </div>
                   </Link>
 
               </section>
