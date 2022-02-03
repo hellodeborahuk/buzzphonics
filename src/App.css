@@ -1,0 +1,51 @@
+
+:root {
+  --dark-navy: #1F354B;
+  --navy: #294461;
+  --green: #11C684;
+  --purple: #6B74E0;
+  --pink: #F878B5;
+  --blue: #0671D5;
+  --yellow: #F7BF31;
+  --light-blue: #6CDFEF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-navy);
+  color: white;
+  margin: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+.phase-two, .phase-three {
+    border-radius: 16px;
+    width: 200px;
+    height: 200px;
+    margin: 2em auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.phase-two {
+    background-color: var(--green);
+}
+
+.phase-three {
+  background-color: var(--purple);
+}
+
+.dove, .feather {
+  align-self: flex-end;
+  margin-top: auto;
+  font-size: 3.5rem;
+}
