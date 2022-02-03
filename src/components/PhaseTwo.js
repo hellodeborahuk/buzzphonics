@@ -1,8 +1,9 @@
 import { MdArrowBackIosNew } from "react-icons/md"
+import { MdFlipCameraAndroid } from "react-icons/md"
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 const PhaseTwo = () => {
-
     const sounds = [
         {
             letter: "s",
@@ -22,7 +23,7 @@ const PhaseTwo = () => {
         {
             letter: "p",
             sound: "/",
-            icon: "pen"
+            icon: "penguin"
         },
         {
             letter: "i",
@@ -121,6 +122,12 @@ const PhaseTwo = () => {
         }
     ]
 
+    const [displayIcons, setdisplayIcons] = useState(false);
+
+    const soundToggle = () => {
+        setdisplayIcons(!displayIcons)
+    }
+
     const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
     // if backgroundColor =  yellow or lightblue then color is darkblue
 
@@ -129,14 +136,18 @@ const PhaseTwo = () => {
             <header>    
                 <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
                 <h1>Phase Two</h1>
+                <MdFlipCameraAndroid onClick={soundToggle} className="toggle" />
             </header>
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {
-                    // get random item from alternatingColor
                     const randomElement = {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
-                    // apply to below as style...   
-                    return (<div className="sound" style={randomElement} ><p>{sound.letter}</p></div>);
+                
+                    if (displayIcons) {
+                        return (<div className="sound" style={randomElement}><img src= {`../images/${sound.icon}.png`} alt={sound.icon} className="sound-icon"/></div>);
+                    } else {
+                        return (<div className="sound" style={randomElement}><p>{sound.letter}</p></div>);
+                    }
                 })
             }
             </div>
