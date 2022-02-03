@@ -11,91 +11,113 @@ const PhaseTwo = () => {
         },
         {
             letter: "a",
-            sound: "/"
+            sound: "/",
+            icon: "ant"
         },
         {
             letter: "t",
-            sound: "/"
+            sound: "/",
+            icon: "tap"
         },
         {
             letter: "p",
-            sound: "/"
+            sound: "/",
+            icon: "pen"
         },
         {
             letter: "i",
-            sound: "/"
+            sound: "/",
+            icon: "igloo"
         },
         {
             letter: "n",
-            sound: "/"
+            sound: "/",
+            icon: "net"
         },
         {
             letter: "m",
-            sound: "/"
+            sound: "/",
+            icon: "map"
         },
         {
             letter: "d",
-            sound: "/"
+            sound: "/",
+            icon: "dog"
         },
         {
             letter: "g",
-            sound: "/"
+            sound: "/",
+            icon: "guitar"
         },
         {
             letter: "o",
-            sound: "/"
+            sound: "/",
+            icon: "octopus"
         },
         {
             letter: "c",
-            sound: "/"
+            sound: "/",
+            icon: "cat"
         },
         {
             letter: "k",
-            sound: "/"
+            sound: "/",
+            icon: "king"
         },
         {
             letter: "ck",
-            sound: "/"
+            sound: "/",
+            icon: "duck"
         },
         {
             letter: "e",
-            sound: "/"
+            sound: "/",
+            icon: "egg"
         },
         {
             letter: "u",
-            sound: "/"
+            sound: "/",
+            icon: "umbrella"
         },
         {
             letter: "r",
-            sound: "/"
+            sound: "/",
+            icon: "rat"
         },
         {
             letter: "h",
-            sound: "/"
+            sound: "/",
+            icon: "hat"
         },
         {
             letter: "b",
-            sound: "/"
+            sound: "/",
+            icon: "bin"
         },
         {
             letter: "f",
-            sound: "/"
+            sound: "/",
+            icon: "frog"
         },
         {
             letter: "ff",
-            sound: "/"
+            sound: "/",
+            icon: "muffin"
         },
         {
             letter: "l",
-            sound: "/"
+            sound: "/",
+            icon: "leaf"
         },
         {
             letter: "ll",
-            sound: "/"
+            sound: "/",
+            icon: "bell"
         },
         {
             letter: "ss",
-            sound: "/"
+            sound: "/",
+            icon: "dress"
         }
     ]
 
