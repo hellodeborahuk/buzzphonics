@@ -1,100 +1,115 @@
+import { Link } from "react-router-dom"
+import { MdArrowBackIosNew } from "react-icons/md"
+
 const PhaseThree = () => {
 
     const sounds = [
         {
-            letter: "s",
+            letter: "j",
             sound: "/"
         },
         {
-            letter: "a",
+            letter: "v",
             sound: "/"
         },
         {
-            letter: "t",
+            letter: "w",
             sound: "/"
         },
         {
-            letter: "p",
+            letter: "x",
             sound: "/"
         },
         {
-            letter: "i",
+            letter: "y",
             sound: "/"
         },
         {
-            letter: "n",
+            letter: "z",
             sound: "/"
         },
         {
-            letter: "m",
+            letter: "zz",
             sound: "/"
         },
         {
-            letter: "d",
+            letter: "qu",
             sound: "/"
         },
         {
-            letter: "g",
+            letter: "ch",
             sound: "/"
         },
         {
-            letter: "o",
+            letter: "sh",
             sound: "/"
         },
         {
-            letter: "c",
+            letter: "th",
             sound: "/"
         },
         {
-            letter: "k",
+            letter: "ng",
             sound: "/"
         },
         {
-            letter: "ck",
+            letter: "ai",
             sound: "/"
         },
         {
-            letter: "e",
+            letter: "ee",
             sound: "/"
         },
         {
-            letter: "u",
+            letter: "igh",
             sound: "/"
         },
         {
-            letter: "r",
+            letter: "oa",
             sound: "/"
         },
         {
-            letter: "h",
+            letter: "oo",
             sound: "/"
         },
         {
-            letter: "b",
+            letter: "oo",
             sound: "/"
         },
         {
-            letter: "f",
+            letter: "ar",
             sound: "/"
         },
         {
-            letter: "ff",
+            letter: "or",
             sound: "/"
         },
         {
-            letter: "l",
+            letter: "ur",
             sound: "/"
         },
         {
-            letter: "ll",
+            letter: "ow",
             sound: "/"
         },
         {
-            letter: "s",
+            letter: "oi",
             sound: "/"
         },
         {
-            letter: "ss",
+            letter: "ear",
+            sound: "/"
+        },
+        {
+            letter: "air",
+            sound: "/"
+        },
+        {
+            letter: "ure",
+            sound: "/"
+        },
+        {
+            letter: "er",
             sound: "/"
         }
     ]
@@ -104,7 +119,10 @@ const PhaseThree = () => {
 
     return ( 
         <section>
-            <h1>Phase Three</h1>
+            <header>    
+                <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
+                <h1>Phase Three</h1>
+            </header>
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {

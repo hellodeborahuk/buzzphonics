@@ -1,3 +1,6 @@
+import { MdArrowBackIosNew } from "react-icons/md"
+import { Link } from "react-router-dom"
+
 const PhaseTwo = () => {
 
     const sounds = [
@@ -104,7 +107,10 @@ const PhaseTwo = () => {
 
     return ( 
         <section>
-            <h1>Phase Two</h1>
+            <header>    
+                <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
+                <h1>Phase Two</h1>
+            </header>
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {

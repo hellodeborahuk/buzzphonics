@@ -32,7 +32,15 @@ a {
   color:white;
 }
 
+header {
+  position: relative;
+}
 
+.back-arrow {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
 
 .phase-two, .phase-three {
     border-radius: 16px;
@@ -82,10 +90,10 @@ margin-top: auto;
   display: flex;
   justify-content: center;
   margin: 0;
+  padding:  6px 10px;
 }
 
 .sound p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  padding-bottom: 4px;
 }
