@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route  } from "react-router-dom";
+import PhaseTwo from './components/PhaseTwo';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render(
+  <BrowserRouter>
+       <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="phaseTwo" element={<PhaseTwo />} />
+       </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

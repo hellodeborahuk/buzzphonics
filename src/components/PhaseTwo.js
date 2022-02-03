@@ -34,15 +34,20 @@ const PhaseTwo = () => {
     ]
 
     const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
-
     // if backgroundColor =  yellow or lightblue then color is darkblue
 
     return ( 
         <section>
             <h1>Phase Two</h1>
             <div className="sound-container">
-            {sounds.map((sound, index) =>
-            <div className="sound"><p>{sound.letter}</p></div>)}
+            {
+                sounds.map((sound, index) => {
+                    // get random item from alternatingColor
+                    const randomElement = {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
+                    // apply to below as style...   
+                    return (<div className="sound" style={randomElement} ><p>{sound.letter}</p></div>);
+                })
+            }
             </div>
         </section>
      );
