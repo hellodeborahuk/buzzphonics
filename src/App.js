@@ -10,7 +10,7 @@ function App() {
 
       <main>
               <h1>Phonics audio guide</h1>
-              <section>
+              <section className="home-section">
                   <Link to="phaseTwo">
                     <div className="phase-two">
                       <div>

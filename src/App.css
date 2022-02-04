@@ -51,10 +51,14 @@ header {
   font-size: 1.25rem;
 }
 
+.home-section {
+  margin-bottom: 40em;
+}
+
 .phase-two, .phase-three, .quiz-button  {
     border-radius: 16px;
     width: 200px;
-    height: 200px;
+    height: 130px;
     margin: 2em auto;
     padding: 1em;
     display: flex;
