@@ -102,6 +102,7 @@ header {
   justify-content: center;
   margin: 0;
   padding:  6px 10px;
+  cursor: pointer;
 }
 
 .sound p {
