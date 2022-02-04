@@ -6,6 +6,7 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import PhaseTwo from './components/PhaseTwo';
 import PhaseThree from "./components/PhaseThree"
+import PhaseTwoQuiz from "./components/PhaseTwoQuiz"
 
 render(
   <BrowserRouter>
@@ -13,7 +14,7 @@ render(
           <Route path="/" element={<App />} />
           <Route path="phaseTwo" element={<PhaseTwo />} />
           <Route path="phaseThree" element={<PhaseThree />} />
-
+          <Route path="phaseTwoQuiz" element={<PhaseTwoQuiz />} />
        </Routes>
   </BrowserRouter>,
   document.getElementById('root')
