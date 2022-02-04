@@ -110,3 +110,9 @@ header {
   width: 30px; 
   padding: 6px 0;
 }
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 4em;
+}
