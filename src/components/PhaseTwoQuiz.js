@@ -41,6 +41,8 @@ const PhaseTwoQuiz= () => {
     const randomElement = () => {
         return {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
     }
+    const trueAnswer = "box-shadow: 0px 0px 30px 1px rgba(17,198,132,0.89)"
+    const falseAnswer = "box-shadow: 0px 0px 30px 1px rgba(248,49,47,0.89);"
 
     const handleNextBtnClick = () => {
         const nextQuestion = currentQuestion + 1
@@ -51,14 +53,15 @@ const PhaseTwoQuiz= () => {
             setdisplayEndPage(true)
         }
     }
-
+    
     const handleAnswer = (isCorrect) => {
-       if (isCorrect === true) {
-        console.log("true");
-       } else {
-           console.log("flase")
-       }
-    }
+        if (isCorrect === true) {
+         console.log("true");
+        } else {
+            console.log("false")
+        }
+     }
+
     return ( 
         <section>
                 <header>    
@@ -79,8 +82,9 @@ const PhaseTwoQuiz= () => {
                         <img className="quiz-image" src={`../images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
                     </div>
                     <div className="quiz-options">
-                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {                                            return (
-                            <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect)}>
+                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {                                            
+                            return (
+                            <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect ? {style: trueAnswer} : {style: falseAnswer})}>
                                 <p>{answer.answerText}</p>
                             </div>
                             )})
