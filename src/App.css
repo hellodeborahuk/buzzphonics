@@ -21,6 +21,7 @@ body {
   background-color: var(--dark-navy);
   color: white;
   margin: 1em;
+  height: 100vh;
 }
 
 h1 {
