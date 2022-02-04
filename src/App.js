@@ -1,6 +1,7 @@
 import './App.css';
 import { FaDove } from 'react-icons/fa';
 import {FaFeatherAlt} from "react-icons/fa"
+import {GiTwirlyFlower} from "react-icons/gi"
 import { Link } from "react-router-dom";
 
 function App() {
@@ -28,9 +29,16 @@ function App() {
                       <FaFeatherAlt className="feather" />
                     </div>
                   </Link>
-
+                  <Link to="PhaseTwoQuiz">
+                  <div className="quiz-button">
+                      <div> 
+                        <h2>Quiz</h2>
+                        <p>Phase 2</p>
+                      </div>
+                      <GiTwirlyFlower className="feather" />
+                    </div>
+                  </Link>
               </section>
-
           </main>
     </div>
   );
