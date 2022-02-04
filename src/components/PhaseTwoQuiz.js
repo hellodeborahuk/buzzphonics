@@ -37,13 +37,12 @@ const PhaseTwoQuiz= () => {
     ]
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [displayEndPage, setdisplayEndPage] = useState(false)
+    const [answered, setAnswered] = useState()
+
     const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
     const randomElement = () => {
         return {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
     }
-    const trueAnswer = "box-shadow: 0px 0px 30px 1px rgba(17,198,132,0.89)"
-    const falseAnswer = "box-shadow: 0px 0px 30px 1px rgba(248,49,47,0.89);"
-
     const handleNextBtnClick = () => {
         const nextQuestion = currentQuestion + 1
         if (nextQuestion < quizQuestions.length) {
@@ -53,12 +52,15 @@ const PhaseTwoQuiz= () => {
             setdisplayEndPage(true)
         }
     }
-    
+
     const handleAnswer = (isCorrect) => {
+        const trueAnswer = "Correct ✅"
+        const falseAnswer = "Try again ❌"
         if (isCorrect === true) {
-         console.log("true");
+            setAnswered(trueAnswer)
         } else {
-            console.log("false")
+            setAnswered(falseAnswer)
+            setTimeout(() => { setAnswered("") }, 1000)
         }
      }
 
@@ -84,12 +86,13 @@ const PhaseTwoQuiz= () => {
                     <div className="quiz-options">
                         { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {                                            
                             return (
-                            <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect ? {style: trueAnswer} : {style: falseAnswer})}>
+                                <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect)}>
                                 <p>{answer.answerText}</p>
                             </div>
                             )})
                         }
-                        </div>
+                    </div>
+                    <p className="quiz-tip">{answered}</p>
                     <button className="next-btn" onClick={handleNextBtnClick}>Next</button>    
                 </div>
             </>

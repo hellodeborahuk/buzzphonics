@@ -143,13 +143,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2em auto;
+  margin: 2em auto 1em;
   gap: 0.75em;
   width: 200px;
 }
 
 .quiz-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -218,5 +219,11 @@ footer {
   {
     transform: scale( .75 );
   }
+}
+
+.quiz-tip {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 1em;
 }
 
