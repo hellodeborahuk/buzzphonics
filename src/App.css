@@ -156,3 +156,18 @@ footer {
   gap: 0.75em;
   width: 200px;
 }
+
+.next-btn {
+  background-color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all .2s ease-in-out;
+}
+
+.next-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
