@@ -44,6 +44,7 @@ const PhaseTwoQuiz= () => {
         return {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
     }
     const handleNextBtnClick = () => {
+        setAnswered()
         const nextQuestion = currentQuestion + 1
         if (nextQuestion < quizQuestions.length) {
             setCurrentQuestion(nextQuestion)
@@ -62,6 +63,7 @@ const PhaseTwoQuiz= () => {
             setAnswered(falseAnswer)
             setTimeout(() => { setAnswered("") }, 1000)
         }
+        
      }
 
     return ( 
