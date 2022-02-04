@@ -66,7 +66,12 @@ const PhaseTwoQuiz= () => {
                 <h1>Phase Two Quiz</h1>
             </header>
             {displayEndPage ? (
-                <div>Well done!</div>
+                <div className="well-done">
+                
+                    <h1>Well done!</h1>
+                   <span className="well-done-icon animate-beat">🎉</span>
+                
+                </div>
             ) : (
                 <>
                 <div className="quiz-container">
