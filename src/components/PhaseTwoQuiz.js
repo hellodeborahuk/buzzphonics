@@ -9,10 +9,11 @@ const PhaseTwoQuiz= () => {
             id: 0,
             image: "dog",
             alt: "dog",
-            a: "f",
-            b: "d",
-            c: "ck",
-            answer: "d"
+            answerOptions: [
+                {answerText: "d", isCorrect: true},
+                {answerText: "f", isCorrect: false},
+                {answerText: "ck", isCorrect: false},
+            ]
         }
     ]
     const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
@@ -35,16 +36,16 @@ const PhaseTwoQuiz= () => {
                                     <img className="quiz-image" src={`../images/${quizQuestion.image}.png`} alt={quizQuestion.alt} />
                                     </div>
                                     <div className="quiz-options">
-                                    <div className="sound" style={randomElement()}>
-                                        <p>{quizQuestion.a}</p>
+                                        { quizQuestions[0].answerOptions.map((answer, index) => {
+                                            console.log(answer.answerText)
+                                            return (
+                                                <div className="sound" style={randomElement()}>
+                                                <p>{answer.answerText}</p>
+                                            </div>
+                                            )
+                                        })
+                                    }
                                     </div>
-                                    <div className="sound" style={randomElement()}>
-                                        <p>{quizQuestion.b}</p>
-                                    </div>   
-                                    <div className="sound" style={randomElement()}>
-                                        <p>{quizQuestion.c}</p>
-                                    </div>
-                                </div>
                                 <button className="next-btn">Next</button>
                              </>
                        )
