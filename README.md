@@ -14,6 +14,7 @@ Simple idea - a list of sounds to listen to ✔️
 Small stretch goal - flip whole page and it has images (e.g fox for f) instead of the letter ✔️
 
 Stretch goal - login and track progress through the sounds
+Stretch goal 2 - games
 
 ## 🎨 Design
 
@@ -25,6 +26,10 @@ I want it to be bright and fun for me to be able to use with my kids.
 ## 🎬 Starting out
 
 I've created a React app with React Router v6 to manage different pages. I was going to keep this a simple JavaScript website but if I go for my stretch goals I think this will be easier with React. I've created the 3 pages so far, and created the divs for all the sounds. I used map() to loop through the array of sounds and also assigned each a random background colour from the ones chosen in the design. Stumbling block so far, how to make the buttons square?
+
+## Adding games
+
+This project was supposed to be just for me, but then my husband added an Issue for a game. This will mean me and my daughter can play with the website together. I've created a quick guess the first sound of the image game. I would like to add another two games, progressing in difficulty.
 
 
 ## 👨‍💻 Contributing
