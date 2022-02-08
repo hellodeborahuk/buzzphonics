@@ -22,6 +22,10 @@ body {
   color: white;
   margin: 1em;
   height: 100vh;
+  background-image: url("../public/images/blob.svg");
+  background-position: -180px 150px;
+  background-repeat: no-repeat;
+  background-size: auto 500px;
 }
 
 h1 {
@@ -52,7 +56,7 @@ header {
 }
 
 .home-section {
-  margin-bottom: 40em;
+  padding-bottom: 2em;
 }
 
 .phase-two, .phase-three, .quiz-button  {
