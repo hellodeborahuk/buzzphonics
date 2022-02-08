@@ -1,6 +1,9 @@
 
 # phonics-sounds
 
+![phonics homepage](https://user-images.githubusercontent.com/29425781/152994665-96c5a720-1191-4aba-968e-0322dcebb8c3.png)
+
+
 ## 👨‍💻 Demo
 
 Check out the website: [Phonics Sounds](https://focused-swirles-0bc3a1.netlify.app/)
