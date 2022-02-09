@@ -4,120 +4,123 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 
 const PhaseTwo = () => {
+
+ 
+
     const sounds = [
         {
             letter: "s",
-            sound: "/",
+            sound: "s",
             icon: "sun"
         },
         {
             letter: "a",
-            sound: "/",
+            sound: "a",
             icon: "ant"
         },
         {
             letter: "t",
-            sound: "/",
+            sound: "t",
             icon: "tap"
         },
         {
             letter: "p",
-            sound: "/",
+            sound: "p",
             icon: "penguin"
         },
         {
             letter: "i",
-            sound: "/",
+            sound: "i",
             icon: "igloo"
         },
         {
             letter: "n",
-            sound: "/",
+            sound: "n",
             icon: "net"
         },
         {
             letter: "m",
-            sound: "/",
+            sound: "m",
             icon: "map"
         },
         {
             letter: "d",
-            sound: "/",
+            sound: "d",
             icon: "dog"
         },
         {
             letter: "g",
-            sound: "/",
+            sound: "g",
             icon: "guitar"
         },
         {
             letter: "o",
-            sound: "/",
+            sound: "o",
             icon: "octopus"
         },
         {
             letter: "c",
-            sound: "/",
+            sound: "c",
             icon: "cat"
         },
         {
             letter: "k",
-            sound: "/",
+            sound: "c",
             icon: "king"
         },
         {
             letter: "ck",
-            sound: "/",
+            sound: "c",
             icon: "duck"
         },
         {
             letter: "e",
-            sound: "/",
+            sound: "e",
             icon: "egg"
         },
         {
             letter: "u",
-            sound: "/",
+            sound: "u",
             icon: "umbrella"
         },
         {
             letter: "r",
-            sound: "/",
+            sound: "r",
             icon: "rat"
         },
         {
             letter: "h",
-            sound: "/",
+            sound: "h",
             icon: "hat"
         },
         {
             letter: "b",
-            sound: "/",
+            sound: "b",
             icon: "bin"
         },
         {
             letter: "f",
-            sound: "/",
+            sound: "f",
             icon: "frog"
         },
         {
             letter: "ff",
-            sound: "/",
+            sound: "f",
             icon: "muffin"
         },
         {
             letter: "l",
-            sound: "/",
+            sound: "l",
             icon: "leaf"
         },
         {
             letter: "ll",
-            sound: "/",
+            sound: "l",
             icon: "bell"
         },
         {
             letter: "ss",
-            sound: "/",
+            sound: "s",
             icon: "dress"
         }
     ]
@@ -142,11 +145,16 @@ const PhaseTwo = () => {
             {
                 sounds.map((sound, index) => {
                     const randomElement = {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
-                
+                    let audio = new Audio(`/sounds/${sound.sound}.m4a`)
+
+                    const start = () => {
+                        audio.play()
+                      }
+
                     if (displayIcons) {
-                        return (<div className="sound" style={randomElement}><img src= {`../images/${sound.icon}.png`} alt={sound.icon} className="sound-icon"/></div>);
+                        return (<div className="sound" style={randomElement} onClick={start}><img src= {`../images/${sound.icon}.png`} alt={sound.icon} className="sound-icon"/></div>);
                     } else {
-                        return (<div className="sound" style={randomElement}><p>{sound.letter}</p></div>);
+                        return (<div className="sound" style={randomElement} onClick={start}><p>{sound.letter}</p></div>);
                     }
                 })
             }
