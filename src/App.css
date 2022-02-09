@@ -46,6 +46,7 @@ header {
   top: 8px;
   left: 0;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .toggle {
@@ -59,7 +60,7 @@ header {
   padding-bottom: 2em;
 }
 
-.phase-two, .phase-three, .quiz-button  {
+.phase-two, .phase-three, .quiz-button, .game-button  {
     border-radius: 16px;
     width: 200px;
     height: 130px;
@@ -129,6 +130,27 @@ footer {
   font-size: 0.8rem;
   text-align: center;
   margin-top: 4em;
+}
+
+/* ============== GAMES ============= */
+
+.games-button {
+  border-radius: 16px;
+  width: 200px;
+  height: 130px;
+  margin: 2em auto;
+  padding: 1em;
+  text-align: left;
+  background-color: var(--yellow);
+  transition: all .2s ease-in-out;
+}
+
+.games-button:hover {
+transform: scale(1.1);
+}
+
+.two {
+  background-color: var(--light-blue);
 }
 
 /* ============== PHASE TWO QUIZ ============= */
@@ -236,3 +258,72 @@ footer {
   margin-bottom: 1em;
 }
 
+/* ============== MATCHING GAME ============= */
+
+.cards {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1em;
+  width: 200px;
+  margin-top: 2em;  
+}
+
+.sound-card {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sound-card.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.sound-card .front,
+.sound-card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.sound-card .front {
+  background: var(--green);
+  transform: rotateY(180deg);
+}
+.sound-card .front p {
+  color: black;
+}
+.sound-card .back {
+  background: var(--pink);
+  font-size: 100px;
+  transition: 0.1s ease all;
+}
+
+
+.sound-icon {
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -29,16 +29,18 @@ function App() {
                       <FaFeatherAlt className="feather" />
                     </div>
                   </Link>
-                  <Link to="PhaseTwoQuiz">
+                  <Link to="games">
                   <div className="quiz-button">
                       <div> 
-                        <h2>Quiz</h2>
-                        <p>Phase 2</p>
+                        <h2>Games</h2>
+                        <p>Practice your sounds</p>
                       </div>
                       <GiTwirlyFlower className="feather" />
                     </div>
                   </Link>
+   
               </section>
+              
           </main>
     </div>
   );

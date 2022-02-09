@@ -1,12 +1,10 @@
 import { MdArrowBackIosNew } from "react-icons/md"
 import { MdFlipCameraAndroid } from "react-icons/md"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 const PhaseTwo = () => {
-
- 
-
+    const navigate = useNavigate()
     const sounds = [
         {
             letter: "s",
@@ -137,7 +135,7 @@ const PhaseTwo = () => {
     return ( 
         <section>
             <header>    
-                <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
+            <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
                 <h1>Phase Two</h1>
                 <MdFlipCameraAndroid onClick={soundToggle} className="toggle" />
             </header>

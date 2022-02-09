@@ -1,8 +1,9 @@
 import { MdArrowBackIosNew } from "react-icons/md"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 const PhaseTwoQuiz= () => {
+    const navigate = useNavigate()
     const quizQuestions = [
         {
             id: 0,
@@ -69,7 +70,7 @@ const PhaseTwoQuiz= () => {
     return ( 
         <section>
                 <header>    
-                <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
+                <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
                 <h1>Phase Two Quiz</h1>
             </header>
             {displayEndPage ? (
