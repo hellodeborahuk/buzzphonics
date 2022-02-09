@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { MdArrowBackIosNew } from "react-icons/md"
 
 const PhaseThree = () => {
-
+    const navigate = useNavigate()
     const sounds = [
         {
             letter: "j",
@@ -120,8 +120,8 @@ const PhaseThree = () => {
     return ( 
         <section>
             <header>    
-                <Link to="/"><MdArrowBackIosNew className="back-arrow" /></Link>
-                <h1>Phase Three</h1>
+            <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
+            <h1>Phase Three</h1>
             </header>
             <div className="sound-container">
             {
