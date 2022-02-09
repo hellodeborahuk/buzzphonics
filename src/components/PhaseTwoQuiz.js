@@ -61,7 +61,7 @@ const PhaseTwoQuiz= () => {
             setAnswered(trueAnswer)
         } else {
             setAnswered(falseAnswer)
-            setTimeout(() => { setAnswered("") }, 1000)
+            setTimeout(() => { setAnswered("") }, 800)
         }
         
      }
@@ -86,9 +86,10 @@ const PhaseTwoQuiz= () => {
                         <img className="quiz-image" src={`../images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
                     </div>
                     <div className="quiz-options">
-                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {                                            
+                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {    
+                                                     
                             return (
-                                <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect)}>
+                                <div className="sound" style={randomElement()}  onClick={() => handleAnswer(answer.isCorrect)}>
                                 <p>{answer.answerText}</p>
                             </div>
                             )})
