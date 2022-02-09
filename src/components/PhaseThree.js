@@ -6,111 +6,111 @@ const PhaseThree = () => {
     const sounds = [
         {
             letter: "j",
-            sound: "/"
+            sound: "j"
         },
         {
             letter: "v",
-            sound: "/"
+            sound: "v"
         },
         {
             letter: "w",
-            sound: "/"
+            sound: "w"
         },
         {
             letter: "x",
-            sound: "/"
+            sound: "x"
         },
         {
             letter: "y",
-            sound: "/"
+            sound: "y"
         },
         {
             letter: "z",
-            sound: "/"
+            sound: "z"
         },
         {
             letter: "zz",
-            sound: "/"
+            sound: "z"
         },
         {
             letter: "qu",
-            sound: "/"
+            sound: "qu"
         },
         {
             letter: "ch",
-            sound: "/"
+            sound: "ch"
         },
         {
             letter: "sh",
-            sound: "/"
+            sound: "sh"
         },
         {
             letter: "th",
-            sound: "/"
+            sound: "th"
         },
         {
             letter: "ng",
-            sound: "/"
+            sound: "ng"
         },
         {
             letter: "ai",
-            sound: "/"
+            sound: "ai"
         },
         {
             letter: "ee",
-            sound: "/"
+            sound: "ee"
         },
         {
             letter: "igh",
-            sound: "/"
+            sound: "igh"
         },
         {
             letter: "oa",
-            sound: "/"
+            sound: "oa"
         },
         {
             letter: "oo",
-            sound: "/"
+            sound: "oo"
         },
         {
             letter: "oo",
-            sound: "/"
+            sound: "ooo"
         },
         {
             letter: "ar",
-            sound: "/"
+            sound: "ar"
         },
         {
             letter: "or",
-            sound: "/"
+            sound: "or"
         },
         {
             letter: "ur",
-            sound: "/"
+            sound: "ur"
         },
         {
             letter: "ow",
-            sound: "/"
+            sound: "ow"
         },
         {
             letter: "oi",
-            sound: "/"
+            sound: "oi"
         },
         {
             letter: "ear",
-            sound: "/"
+            sound: "ear"
         },
         {
             letter: "air",
-            sound: "/"
+            sound: "air"
         },
         {
             letter: "ure",
-            sound: "/"
+            sound: "ure"
         },
         {
             letter: "er",
-            sound: "/"
+            sound: "er"
         }
     ]
 
@@ -126,10 +126,15 @@ const PhaseThree = () => {
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {
+                    let audio = new Audio(`/sounds/${sound.sound}.m4a`)
+
+                    const start = () => {
+                        audio.play()
+                      }
                     // get random item from alternatingColor
                     const randomElement = {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
                     // apply to below as style...   
-                    return (<div className="sound" style={randomElement} ><p>{sound.letter}</p></div>);
+                    return (<div className="sound" style={randomElement} onClick={start}><p>{sound.letter}</p></div>);
                 })
             }
             </div>
