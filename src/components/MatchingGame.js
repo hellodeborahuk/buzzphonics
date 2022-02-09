@@ -75,6 +75,8 @@ const MatchingGame = () => {
                   );
                 })}
             </div>
+            <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
+
         </section>
      );
 }
