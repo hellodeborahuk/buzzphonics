@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {MdArrowBackIosNew} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 
@@ -22,21 +22,26 @@ const MatchingGame = () => {
 })].sort(() => Math.random() - 0.5));
 
     function flipCard(index) {
-        setOpenedCard((opened) => [...opened, index]);
+        setOpenedCard((opened) => {
+          if (openedCard.length === 2) {return opened}
+          const merged = [...opened, index]
+        
+          if (merged.length < 2) {return merged;}
+      
+          const firstMatched = pairOfSounds[merged[0]];
+          const secondMatched = pairOfSounds[merged[1]];
+      
+          if (secondMatched && firstMatched.id === secondMatched.id) {
+            setMatched([...matched, firstMatched.id]);
+          }
+      
+          if (merged.length === 2) setTimeout(() => setOpenedCard([]), 1000);
+
+          return merged
+        });
+        
     }
 
-    useEffect(() => {
-        if (openedCard < 2) return;
-    
-        const firstMatched = pairOfSounds[openedCard[0]];
-        const secondMatched = pairOfSounds[openedCard[1]];
-    
-        if (secondMatched && firstMatched.id === secondMatched.id) {
-          setMatched([...matched, firstMatched.id]);
-        }
-    
-        if (openedCard.length === 2) setTimeout(() => setOpenedCard([]), 1000);
-      }, [openedCard]);
 
     return ( 
         <section>
