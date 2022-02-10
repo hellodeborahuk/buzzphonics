@@ -4,7 +4,8 @@ import { useState } from "react"
 
 const PhaseTwoQuiz= () => {
     const navigate = useNavigate()
-    const quizQuestions = [
+
+    const [quizQuestions] = useState([
         {
             id: 0,
             image: "duck",
@@ -85,7 +86,8 @@ const PhaseTwoQuiz= () => {
                 {answerText: "b", isCorrect: true},
             ]
         },
-    ]
+    ].sort(() => Math.random() - 0.5).slice(0,5))
+
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
