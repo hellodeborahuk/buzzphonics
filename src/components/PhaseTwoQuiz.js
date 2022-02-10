@@ -7,8 +7,8 @@ const PhaseTwoQuiz= () => {
     const quizQuestions = [
         {
             id: 0,
-            image: "dog",
-            alt: "dog",
+            image: "duck",
+            alt: "duck",
             answerOptions: [
                 {answerText: "d", isCorrect: true},
                 {answerText: "f", isCorrect: false},
@@ -18,21 +18,71 @@ const PhaseTwoQuiz= () => {
         {
             id: 1,
             image: "king",
-            alt: "crown",
+            alt: "king",
             answerOptions: [
-                {answerText: "c", isCorrect: true},
+                {answerText: "k", isCorrect: true},
                 {answerText: "h", isCorrect: false},
                 {answerText: "ck", isCorrect: false},
             ]
         },
         {
             id: 2,
-            image: "frog",
-            alt: "frog",
+            image: "fox",
+            alt: "fox",
             answerOptions: [
                 {answerText: "a", isCorrect: false},
                 {answerText: "f", isCorrect: true},
                 {answerText: "p", isCorrect: false},
+            ]
+        },
+        {
+            id: 3,
+            image: "igloo",
+            alt: "igloo",
+            answerOptions: [
+                {answerText: "p", isCorrect: false},
+                {answerText: "m", isCorrect: false},
+                {answerText: "i", isCorrect: true},
+            ]
+        },
+        {
+            id: 4,
+            image: "leaf",
+            alt: "leaf",
+            answerOptions: [
+                {answerText: "l", isCorrect: true},
+                {answerText: "n", isCorrect: false},
+                {answerText: "e", isCorrect: false},
+            ]
+        },
+        {
+            id: 5,
+            image: "map",
+            alt: "map",
+            answerOptions: [
+                {answerText: "t", isCorrect: false},
+                {answerText: "m", isCorrect: true},
+                {answerText: "p", isCorrect: false},
+            ]
+        },
+        {
+            id: 6,
+            image: "octopus",
+            alt: "octopus",
+            answerOptions: [
+                {answerText: "o", isCorrect: true},
+                {answerText: "b", isCorrect: false},
+                {answerText: "d", isCorrect: false},
+            ]
+        },
+        {
+            id: 7,
+            image: "bus",
+            alt: "bus",
+            answerOptions: [
+                {answerText: "s", isCorrect: false},
+                {answerText: "f", isCorrect: false},
+                {answerText: "b", isCorrect: true},
             ]
         },
     ]
@@ -84,7 +134,7 @@ const PhaseTwoQuiz= () => {
                 <>
                 <div className="quiz-container">
                     <div className="quiz-image-container" style={randomElement()}>
-                        <img className="quiz-image" src={`../images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
+                        <img className="quiz-image" src={`../images/quiz-images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
                     </div>
                     <div className="quiz-options">
                         { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {    
