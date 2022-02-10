@@ -164,7 +164,7 @@ transform: scale(1.1);
 .quiz-image-container {
   width: 200px;
   height: 200px;
-  background-color: var(--pink);
+  background-color: var(--blue);
   border-radius: 16px;
 }
 

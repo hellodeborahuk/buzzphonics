@@ -91,10 +91,6 @@ const PhaseTwoQuiz= () => {
     const [answered, setAnswered] = useState()
     const [cantContinue, setCantContinue] = useState(true)
 
-    const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
-    const randomElement = () => {
-        return {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
-    }
     const handleNextBtnClick = () => {
         setAnswered()
         setCantContinue(true)
@@ -134,14 +130,14 @@ const PhaseTwoQuiz= () => {
             ) : (
                 <>
                 <div className="quiz-container">
-                    <div className="quiz-image-container" style={randomElement()}>
+                    <div className="quiz-image-container">
                         <img className="quiz-image" src={`../images/quiz-images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
                     </div>
                     <div className="quiz-options">
                         { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {    
                                                      
                             return (
-                                <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect)}>
+                                <div className="sound" onClick={() => handleAnswer(answer.isCorrect)}>
                                 <p>{answer.answerText}</p>
                             </div>
                             )})
