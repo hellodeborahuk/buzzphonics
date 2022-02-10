@@ -124,11 +124,9 @@ const PhaseTwoQuiz= () => {
                 <h1>Phase Two Quiz</h1>
             </header>
             {displayEndPage ? (
-                <div className="well-done">
-                
+                <div className="well-done">   
                     <h1>Well done!</h1>
                    <span className="well-done-icon animate-beat">🎉</span>
-                
                 </div>
             ) : (
                 <>
@@ -149,6 +147,7 @@ const PhaseTwoQuiz= () => {
                     <p className="quiz-tip">{answered}</p>
                     <button className="next-btn" onClick={handleNextBtnClick}>Next</button>    
                 </div>
+                <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
             </>
             )}
         </section> 

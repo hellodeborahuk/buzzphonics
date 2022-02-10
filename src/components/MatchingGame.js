@@ -15,6 +15,7 @@ const MatchingGame = () => {
 
    const [openedCard, setOpenedCard] = useState([]);
    const [matched, setMatched] = useState([]);
+   const [finished, setFinished] = useState()
    const [pairOfSounds] = useState([...sounds.map((sound) => {
     return {id: sound.id, letter: sound.letter}
 }), ...sounds.map((sound) => {
@@ -36,12 +37,16 @@ const MatchingGame = () => {
           }
       
           if (merged.length === 2) setTimeout(() => setOpenedCard([]), 1000);
+          
+          const wellDone = "Well done! 🎉"
+          if (matched.length === 5) {
+              setFinished(wellDone)
+          }
 
           return merged
         });
         
     }
-
 
     return ( 
         <section>
@@ -75,8 +80,8 @@ const MatchingGame = () => {
                   );
                 })}
             </div>
+            <h1 className="finished-game">{finished}</h1>
             <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
-
         </section>
      );
 }
