@@ -147,7 +147,7 @@ footer {
   margin: 2em auto;
   padding: 1em;
   text-align: left;
-  background-color: var(--yellow);
+  background-color: var(--green);
   transition: all .2s ease-in-out;
 }
 
@@ -156,7 +156,7 @@ transform: scale(1.1);
 }
 
 .two {
-  background-color: var(--light-blue);
+  background-color: var(--purple);
 }
 
 /* ============== PHASE TWO QUIZ ============= */
@@ -313,7 +313,7 @@ transform: scale(1.1);
 }
 
 .sound-card .front {
-  background: var(--green);
+  background: var(--light-blue);
   transform: rotateY(180deg);
 }
 .sound-card .front p {
