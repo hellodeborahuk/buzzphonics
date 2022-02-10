@@ -3,6 +3,7 @@ import { FaDove } from 'react-icons/fa';
 import {FaFeatherAlt} from "react-icons/fa"
 import {GiTwirlyFlower} from "react-icons/gi"
 import { Link } from "react-router-dom";
+import Greeting from './components/Greeting';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       <main>
               <h1>Phonics audio guide</h1>
+              <Greeting />
               <section className="home-section">
                   <Link to="phaseTwo">
                     <div className="phase-two">
