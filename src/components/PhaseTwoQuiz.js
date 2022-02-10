@@ -89,6 +89,7 @@ const PhaseTwoQuiz= () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
+    const [cantContinue, setCantContinue] = useState(true)
 
     const alternatingColor = ["var(--pink)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--light-blue)", "var(--purple)"]
     const randomElement = () => {
@@ -96,6 +97,7 @@ const PhaseTwoQuiz= () => {
     }
     const handleNextBtnClick = () => {
         setAnswered()
+        setCantContinue(true)
         const nextQuestion = currentQuestion + 1
         if (nextQuestion < quizQuestions.length) {
             setCurrentQuestion(nextQuestion)
@@ -109,6 +111,7 @@ const PhaseTwoQuiz= () => {
         const trueAnswer = "Correct ✅"
         const falseAnswer = "Try again ❌"
         if (isCorrect === true) {
+            setCantContinue(false)
             setAnswered(trueAnswer)
         } else {
             setAnswered(falseAnswer)
@@ -138,14 +141,14 @@ const PhaseTwoQuiz= () => {
                         { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {    
                                                      
                             return (
-                                <div className="sound" style={randomElement()}  onClick={() => handleAnswer(answer.isCorrect)}>
+                                <div className="sound" style={randomElement()} onClick={() => handleAnswer(answer.isCorrect)}>
                                 <p>{answer.answerText}</p>
                             </div>
                             )})
                         }
                     </div>
                     <p className="quiz-tip">{answered}</p>
-                    <button className="next-btn" onClick={handleNextBtnClick}>Next</button>    
+                    <button className="next-btn" disabled={cantContinue} onClick={handleNextBtnClick}>Next</button>    
                 </div>
                 <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
             </>
