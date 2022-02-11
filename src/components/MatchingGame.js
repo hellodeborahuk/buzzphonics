@@ -13,14 +13,24 @@ const MatchingGame = () => {
         { id: 6, letter: "s", icon: "sun" }
       ];
 
+   function shuffleCards() {
+    return [...sounds.map((sound) => {
+      return {id: sound.id, letter: sound.letter}
+  }), ...sounds.map((sound) => {
+      return {id: sound.id, icon: sound.icon}
+  })].sort(() => Math.random() - 0.5)
+   }
    const [openedCard, setOpenedCard] = useState([]);
    const [matched, setMatched] = useState([]);
-   const [finished, setFinished] = useState()
-   const [pairOfSounds] = useState([...sounds.map((sound) => {
-    return {id: sound.id, letter: sound.letter}
-}), ...sounds.map((sound) => {
-    return {id: sound.id, icon: sound.icon}
-})].sort(() => Math.random() - 0.5));
+   const [finished, setFinished] = useState(null)
+   const [pairOfSounds, setPairOfSounds] = useState(shuffleCards);
+
+  function newGame() {
+    setOpenedCard([])
+    setMatched([])
+    setFinished(null)
+    setPairOfSounds(shuffleCards())
+  }
 
     function flipCard(index) {
         setOpenedCard((opened) => {
@@ -38,7 +48,12 @@ const MatchingGame = () => {
       
           if (merged.length === 2) setTimeout(() => setOpenedCard([]), 1000);
           
-          const wellDone = "Well done! 🎉"
+          const wellDone = (
+              <>
+                <h1 className="finished-game">Well done! 🎉</h1>
+                <button className="new-game-btn" onClick={newGame}>New Game</button>
+              </>
+            )
           if (matched.length === 5) {
               setFinished(wellDone)
           }
@@ -80,7 +95,7 @@ const MatchingGame = () => {
                   );
                 })}
             </div>
-            <h1 className="finished-game">{finished}</h1>
+            {finished}
             <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
         </section>
      );

@@ -5,93 +5,102 @@ import { useState } from "react"
 const PhaseTwoQuiz= () => {
     const navigate = useNavigate()
 
-    const [quizQuestions] = useState([
-        {
-            id: 0,
-            image: "duck",
-            alt: "duck",
-            answerOptions: [
-                {answerText: "d", isCorrect: true},
-                {answerText: "f", isCorrect: false},
-                {answerText: "ck", isCorrect: false},
-            ]
-        },
-        {
-            id: 1,
-            image: "king",
-            alt: "king",
-            answerOptions: [
-                {answerText: "k", isCorrect: true},
-                {answerText: "h", isCorrect: false},
-                {answerText: "ck", isCorrect: false},
-            ]
-        },
-        {
-            id: 2,
-            image: "fox",
-            alt: "fox",
-            answerOptions: [
-                {answerText: "a", isCorrect: false},
-                {answerText: "f", isCorrect: true},
-                {answerText: "p", isCorrect: false},
-            ]
-        },
-        {
-            id: 3,
-            image: "igloo",
-            alt: "igloo",
-            answerOptions: [
-                {answerText: "p", isCorrect: false},
-                {answerText: "m", isCorrect: false},
-                {answerText: "i", isCorrect: true},
-            ]
-        },
-        {
-            id: 4,
-            image: "leaf",
-            alt: "leaf",
-            answerOptions: [
-                {answerText: "l", isCorrect: true},
-                {answerText: "n", isCorrect: false},
-                {answerText: "e", isCorrect: false},
-            ]
-        },
-        {
-            id: 5,
-            image: "map",
-            alt: "map",
-            answerOptions: [
-                {answerText: "t", isCorrect: false},
-                {answerText: "m", isCorrect: true},
-                {answerText: "p", isCorrect: false},
-            ]
-        },
-        {
-            id: 6,
-            image: "octopus",
-            alt: "octopus",
-            answerOptions: [
-                {answerText: "o", isCorrect: true},
-                {answerText: "b", isCorrect: false},
-                {answerText: "d", isCorrect: false},
-            ]
-        },
-        {
-            id: 7,
-            image: "bus",
-            alt: "bus",
-            answerOptions: [
-                {answerText: "s", isCorrect: false},
-                {answerText: "f", isCorrect: false},
-                {answerText: "b", isCorrect: true},
-            ]
-        },
-    ].sort(() => Math.random() - 0.5).slice(0,5))
+    function shuffleSounds() {
+        return [
+            {
+                id: 0,
+                image: "duck",
+                alt: "duck",
+                answerOptions: [
+                    {answerText: "d", isCorrect: true},
+                    {answerText: "f", isCorrect: false},
+                    {answerText: "ck", isCorrect: false},
+                ]
+            },
+            {
+                id: 1,
+                image: "king",
+                alt: "king",
+                answerOptions: [
+                    {answerText: "k", isCorrect: true},
+                    {answerText: "h", isCorrect: false},
+                    {answerText: "ck", isCorrect: false},
+                ]
+            },
+            {
+                id: 2,
+                image: "fox",
+                alt: "fox",
+                answerOptions: [
+                    {answerText: "a", isCorrect: false},
+                    {answerText: "f", isCorrect: true},
+                    {answerText: "p", isCorrect: false},
+                ]
+            },
+            {
+                id: 3,
+                image: "igloo",
+                alt: "igloo",
+                answerOptions: [
+                    {answerText: "p", isCorrect: false},
+                    {answerText: "m", isCorrect: false},
+                    {answerText: "i", isCorrect: true},
+                ]
+            },
+            {
+                id: 4,
+                image: "leaf",
+                alt: "leaf",
+                answerOptions: [
+                    {answerText: "l", isCorrect: true},
+                    {answerText: "n", isCorrect: false},
+                    {answerText: "e", isCorrect: false},
+                ]
+            },
+            {
+                id: 5,
+                image: "map",
+                alt: "map",
+                answerOptions: [
+                    {answerText: "t", isCorrect: false},
+                    {answerText: "m", isCorrect: true},
+                    {answerText: "p", isCorrect: false},
+                ]
+            },
+            {
+                id: 6,
+                image: "octopus",
+                alt: "octopus",
+                answerOptions: [
+                    {answerText: "o", isCorrect: true},
+                    {answerText: "b", isCorrect: false},
+                    {answerText: "d", isCorrect: false},
+                ]
+            },
+            {
+                id: 7,
+                image: "bus",
+                alt: "bus",
+                answerOptions: [
+                    {answerText: "s", isCorrect: false},
+                    {answerText: "f", isCorrect: false},
+                    {answerText: "b", isCorrect: true},
+                ]
+            },
+        ].sort(() => Math.random() - 0.5).slice(0,5)
+    }
 
+    const [quizQuestions, setQuizQuestions] = useState(shuffleSounds)
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
     const [cantContinue, setCantContinue] = useState(true)
+
+    function newGame() {
+        setdisplayEndPage(false)
+        setCurrentQuestion(0)
+        setQuizQuestions(shuffleSounds())
+      }
 
     const handleNextBtnClick = () => {
         setAnswered()
@@ -126,8 +135,10 @@ const PhaseTwoQuiz= () => {
             </header>
             {displayEndPage ? (
                 <div className="well-done">   
-                    <h1>Well done!</h1>
+                <h1>Well done!</h1>
                    <span className="well-done-icon animate-beat">🎉</span>
+                   <button className="new-game-btn" onClick={newGame}>New Game</button>
+
                 </div>
             ) : (
                 <>
