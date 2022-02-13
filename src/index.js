@@ -9,9 +9,11 @@ import PhaseThree from "./components/PhaseThree"
 import PhaseTwoQuiz from "./components/PhaseTwoQuiz"
 import MatchingGame from "./components/MatchingGame"
 import Games from "./components/Games"
+import PointsProvider  from './components/PointsProvider';
 
 render(
   <BrowserRouter>
+         <PointsProvider>
        <Routes>
           <Route path="/" element={<App />} />
           <Route path="phaseTwo" element={<PhaseTwo />} />
@@ -19,8 +21,8 @@ render(
           <Route path="games" element={<Games />} />
           <Route path="games/phaseTwoQuiz" element={<PhaseTwoQuiz />} />
           <Route path="games/matchingGame" element={<MatchingGame />} />
-
        </Routes>
+       </PointsProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

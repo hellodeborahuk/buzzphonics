@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {MdArrowBackIosNew} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
+import { pointsContext } from "./PointsProvider";
 
 const MatchingGame = () => {
   const navigate = useNavigate();
-  
+  const [points, setPoints] = useContext(pointsContext);
+
   const sounds = [
         { id: 1, letter: "h", icon: "hat" },
         { id: 2, letter: "f", icon: "frog" },
@@ -67,6 +69,7 @@ const MatchingGame = () => {
             )
           if (matched.length === 5) {
               setFinished(wellDone)
+              setPoints(points + 1)
           }
 
           return merged
