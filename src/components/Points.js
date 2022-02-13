@@ -5,7 +5,7 @@ const Points = () => {
     const [points, setPoints] = useContext(pointsContext);
 
     return ( <div>
-        {points}
+        <div className="star">{points}</div>
     </div> );
 }
  
