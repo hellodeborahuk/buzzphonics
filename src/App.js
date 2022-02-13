@@ -5,11 +5,8 @@ import {GiTwirlyFlower} from "react-icons/gi"
 import { Link } from "react-router-dom";
 import Greeting from './components/Greeting';
 import Points from "./components/Points"
-import { pointsContext } from "./components/PointsProvider";
-import { useContext } from 'react';
 
 function App() {
-  const [points, setPoints] = useContext(pointsContext)
   return (
     <div className="App">
       <main>
