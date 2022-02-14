@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <main>
-              <h1>Phonics audio guide</h1>
+              <h1>Phonics fun</h1>
               <Greeting />
               <section className="home-section">
                   <Link to="phaseTwo">
