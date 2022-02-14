@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import {MdArrowBackIosNew } from "react-icons/md"
+import Points from "./Points";
 
 const Games = () => {
     const navigate = useNavigate()
@@ -20,6 +21,7 @@ const Games = () => {
                         <p>Phase 2</p>
                    </div>
                   </Link>
+                  <Points />
         </section>
      );
 }
