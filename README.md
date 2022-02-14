@@ -55,3 +55,6 @@ Before installation, please make sure you have already installed following tools
 3. Navigate to the project directory `cd phonics-sounds`
 4. Install dependencies with `npm install`
 5. Run `npm start`
+
+## Show your support
+Give a ⭐️ if this project helps you or you like it.
