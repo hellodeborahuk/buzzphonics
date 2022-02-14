@@ -40,6 +40,9 @@ This project was supposed to be just for me, but then my husband added an Issue 
 - Any contributions you make are **greatly appreciated**.
 - Check out my [contribution guidelines](https://github.com/hellodeborahuk/phonics-sounds/blob/main/Contributing.md) for more information.
 
+## 🛡️ License
+Phonics sounds is licensed under the MIT License - see the [LICENSE file](https://github.com/hellodeborahuk/phonics-sounds/blob/main/LICENSE) for details.
+
 ## 👇 Prerequisites
 
 Before installation, please make sure you have already installed following tools:
