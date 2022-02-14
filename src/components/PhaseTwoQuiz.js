@@ -1,6 +1,6 @@
 import { MdArrowBackIosNew } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { pointsContext } from "./PointsProvider";
 
 const PhaseTwoQuiz= () => {
@@ -96,7 +96,7 @@ const PhaseTwoQuiz= () => {
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
     const [cantContinue, setCantContinue] = useState(true)
-    const [points, setPoints] = useContext(pointsContext)
+    const [points, incrementPoints] = useContext(pointsContext)
 
     function newGame() {
         setdisplayEndPage(false)
@@ -113,7 +113,7 @@ const PhaseTwoQuiz= () => {
         }
         else {
             setdisplayEndPage(true)
-            setPoints(points + 1)
+            incrementPoints()
         }
     }
 
@@ -128,10 +128,6 @@ const PhaseTwoQuiz= () => {
             setTimeout(() => { setAnswered("") }, 800)
         }      
      }
-
-     useEffect(() => {
-        localStorage.setItem("points", points);
-      }, [points]);
 
     return ( 
         <section>
