@@ -6,7 +6,7 @@ const Points = () => {
 
 
     return ( <div>
-        <div className="star">{points}</div>
+        <div className="hexagon">{points}</div>
     </div> );
 }
  

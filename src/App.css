@@ -41,6 +41,29 @@ header {
   position: relative;
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.title {
+  color: var(--yellow);
+  margin: 0;
+}
+
+.title-span {
+  color: white;
+  font-weight: 200;
+}
+
+.title-image {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+}
+
 .back-arrow {
   position: absolute;
   top: 8px;
@@ -354,11 +377,11 @@ transform: scale(1.1);
   cursor: pointer;
 }
 
-.star {
-    height: 100px;
-    width: 100px;
-    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+.hexagon {
+    height: 60px;
+    width: 60px;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     text-align: center;
     background: var(--yellow);
     color: black;
@@ -366,7 +389,7 @@ transform: scale(1.1);
     font-weight: 600;
   }
   
-  .star::before {
+  .hexagon::before {
     display: inline-block;
     height: 100%;
     background: var(--yellow);
