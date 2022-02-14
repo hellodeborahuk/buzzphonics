@@ -1,8 +1,7 @@
 
 # phonics-sounds
 
-![phonics homepage](https://user-images.githubusercontent.com/29425781/152994665-96c5a720-1191-4aba-968e-0322dcebb8c3.png)
-
+![Sounds-preview](https://user-images.githubusercontent.com/29425781/153875788-5cf5d186-478e-4de6-b6b6-203ea494c57d.gif)
 
 ## 👨‍💻 Demo
 
