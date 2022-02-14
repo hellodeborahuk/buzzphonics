@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import {MdArrowBackIosNew} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { pointsContext } from "./PointsProvider";
@@ -6,6 +6,10 @@ import { pointsContext } from "./PointsProvider";
 const MatchingGame = () => {
   const navigate = useNavigate();
   const [points, setPoints] = useContext(pointsContext);
+
+  useEffect(() => {
+    localStorage.setItem("points", points);
+  }, [points]);
 
   const sounds = [
         { id: 1, letter: "h", icon: "hat" },

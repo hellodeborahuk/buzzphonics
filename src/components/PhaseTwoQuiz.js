@@ -1,7 +1,8 @@
 import { MdArrowBackIosNew } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { pointsContext } from "./PointsProvider";
+
 const PhaseTwoQuiz= () => {
     const navigate = useNavigate()
 
@@ -125,9 +126,12 @@ const PhaseTwoQuiz= () => {
         } else {
             setAnswered(falseAnswer)
             setTimeout(() => { setAnswered("") }, 800)
-        }
-        
+        }      
      }
+
+     useEffect(() => {
+        localStorage.setItem("points", points);
+      }, [points]);
 
     return ( 
         <section>
