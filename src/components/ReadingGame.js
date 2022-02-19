@@ -3,89 +3,99 @@ import { useNavigate } from "react-router-dom"
 import { useState, useContext } from "react"
 import { pointsContext } from "./PointsProvider";
 
-const PhaseTwoQuiz= () => {
+const ReadingGame= () => {
     const navigate = useNavigate()
 
     function shuffleSounds() {
         return [
             {
                 id: 0,
-                image: "duck",
-                alt: "duck",
+                word: "chair",
                 answerOptions: [
-                    {answerText: "d", isCorrect: true},
-                    {answerText: "f", isCorrect: false},
-                    {answerText: "ck", isCorrect: false},
+                    {answerImg: "chair", isCorrect: true},
+                    {answerImg: "jam", isCorrect: false},
+                    {answerImg: "lobster", isCorrect: false},
                 ]
             },
             {
                 id: 1,
-                image: "king",
-                alt: "king",
+                word: "book",
                 answerOptions: [
-                    {answerText: "k", isCorrect: true},
-                    {answerText: "h", isCorrect: false},
-                    {answerText: "ck", isCorrect: false},
+                    {answerImg: "jam", isCorrect: false},
+                    {answerImg: "book", isCorrect: true},
+                    {answerImg: "watch", isCorrect: false},
                 ]
             },
             {
                 id: 2,
-                image: "fox",
-                alt: "fox",
+                word: "shoe",
                 answerOptions: [
-                    {answerText: "a", isCorrect: false},
-                    {answerText: "f", isCorrect: true},
-                    {answerText: "p", isCorrect: false},
+                    {answerImg: "shoe",  isCorrect: true},
+                    {answerImg: "snail", isCorrect: false},
+                    {answerImg: "sweet", isCorrect: false},
                 ]
             },
             {
                 id: 3,
-                image: "igloo",
-                alt: "igloo",
+                word: "sweet",
                 answerOptions: [
-                    {answerText: "p", isCorrect: false},
-                    {answerText: "m", isCorrect: false},
-                    {answerText: "i", isCorrect: true},
+                    {answerImg: "moon", isCorrect: false},
+                    {answerImg: "witch", isCorrect: false},
+                    {answerImg: "sweet", isCorrect: true},
                 ]
             },
             {
                 id: 4,
-                image: "leaf",
-                alt: "leaf",
+                word: "witch",
                 answerOptions: [
-                    {answerText: "l", isCorrect: true},
-                    {answerText: "n", isCorrect: false},
-                    {answerText: "e", isCorrect: false},
+                    {answerImg: "book", isCorrect: false},
+                    {answerImg: "train", isCorrect: false},
+                    {answerImg: "witch", isCorrect: true},
                 ]
             },
             {
                 id: 5,
-                image: "map",
-                alt: "map",
+                word: "fish",
                 answerOptions: [
-                    {answerText: "t", isCorrect: false},
-                    {answerText: "m", isCorrect: true},
-                    {answerText: "p", isCorrect: false},
+                    {answerImg: "fish", isCorrect: true},
+                    {answerImg: "lobster", isCorrect: false},
+                    {answerImg: "train", isCorrect: false},
                 ]
             },
             {
                 id: 6,
-                image: "octopus",
-                alt: "octopus",
+                word: "cow",
                 answerOptions: [
-                    {answerText: "o", isCorrect: true},
-                    {answerText: "b", isCorrect: false},
-                    {answerText: "d", isCorrect: false},
+                    {answerImg: "moon", isCorrect: false},
+                    {answerImg: "shoe", isCorrect: false},
+                    {answerImg: "cow", isCorrect: true},
                 ]
             },
             {
                 id: 7,
-                image: "bus",
-                alt: "bus",
+                word: "shell",
                 answerOptions: [
-                    {answerText: "s", isCorrect: false},
-                    {answerText: "f", isCorrect: false},
-                    {answerText: "b", isCorrect: true},
+                    {answerImg: "fish", isCorrect: false},
+                    {answerImg: "shell", isCorrect: true},
+                    {answerImg: "snail", isCorrect: false},
+                ]
+            },
+            {
+                id: 8,
+                word: "train",
+                answerOptions: [
+                    {answerImg: "train", isCorrect: true},
+                    {answerImg: "jam", isCorrect: false},
+                    {answerImg: "chair", isCorrect: false},
+                ]
+            },
+            {
+                id: 9,
+                word: "watch",
+                answerOptions: [
+                    {answerImg: "sweet", isCorrect: false},
+                    {answerImg: "cow", isCorrect: false},
+                    {answerImg: "watch", isCorrect: true},
                 ]
             },
         ].sort(() => Math.random() - 0.5).slice(0,5)
@@ -133,7 +143,7 @@ const PhaseTwoQuiz= () => {
         <section>
                 <header>    
                 <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
-                <h1>Phase Two Quiz</h1>
+                <h1>Reading game</h1>
             </header>
             {displayEndPage ? (
                 <div className="well-done">   
@@ -145,15 +155,14 @@ const PhaseTwoQuiz= () => {
             ) : (
                 <>
                 <div className="quiz-container">
-                    <div className="quiz-image-container">
-                        <img className="quiz-image" src={`../images/quiz-images/${quizQuestions[currentQuestion].image}.png`} alt={quizQuestions[currentQuestion].alt} />
+                    <div className="reading-game-word">
+                        <div>{quizQuestions[currentQuestion].word}</div>
                     </div>
                     <div className="quiz-options">
-                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {    
-                                                     
+                        { quizQuestions[currentQuestion].answerOptions.map((answer, index) => {                     
                             return (
-                                <div className="sound" onClick={() => handleAnswer(answer.isCorrect)}>
-                                <p>{answer.answerText}</p>
+                            <div className="sound reading-card" onClick={() => handleAnswer(answer.isCorrect)}>
+                                <img className="reading-images" src={`../images/reading-images/${answer.answerImg}.png`} alt={answer.answerImg} />
                             </div>
                             )})
                         }
@@ -168,4 +177,4 @@ const PhaseTwoQuiz= () => {
     );
 }
  
-export default PhaseTwoQuiz
+export default ReadingGame

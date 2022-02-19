@@ -182,6 +182,10 @@ transform: scale(1.1);
   background-color: var(--purple);
 }
 
+.three {
+  background-color: var(--pink);
+}
+
 /* ============== PHASE TWO QUIZ ============= */
 
 .quiz-image-container {
@@ -396,3 +400,29 @@ transform: scale(1.1);
     vertical-align: middle;
     content: '';
   }
+
+  /* =================== READING GAME =================== */
+
+  .reading-game-word {
+    width: 100%;
+    padding: 0.5em;
+    background-color: var(--blue);
+    border-radius: 16px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .reading-card {
+    width: 57px;
+    height: 57px;
+  }
+  .reading-images {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
