@@ -106,7 +106,7 @@ const ReadingGame= () => {
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
     const [cantContinue, setCantContinue] = useState(true)
-    const [incrementPoints] = useContext(pointsContext)
+    const incrementalPoints = useContext(pointsContext)[1]
 
     function newGame() {
         setdisplayEndPage(false)
@@ -123,7 +123,7 @@ const ReadingGame= () => {
         }
         else {
             setdisplayEndPage(true)
-            incrementPoints()
+            incrementalPoints()
         }
     }
 
