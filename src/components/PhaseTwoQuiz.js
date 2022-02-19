@@ -96,7 +96,7 @@ const PhaseTwoQuiz= () => {
     const [displayEndPage, setdisplayEndPage] = useState(false)
     const [answered, setAnswered] = useState()
     const [cantContinue, setCantContinue] = useState(true)
-    const [points, incrementPoints] = useContext(pointsContext)
+    const [incrementPoints] = useContext(pointsContext)
 
     function newGame() {
         setdisplayEndPage(false)
