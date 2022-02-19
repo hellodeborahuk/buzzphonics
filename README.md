@@ -5,7 +5,11 @@
 
 ## 👨‍💻 Demo
 
-Check out the website: [Phonics Sounds](https://focused-swirles-0bc3a1.netlify.app/)
+Check out the website: [buzzphonics](https://focused-swirles-0bc3a1.netlify.app/)
+
+## Tech used
+
+<img alt="HTML5" src="https://img.shields.io/badge/html5-%2311C684.svg?style=for-the-badge&logo=html5&logoColor=140200"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%23F878B5.svg?style=for-the-badge&logo=css3&logoColor=140200"/> <img alt="React" src="https://img.shields.io/badge/react-%236B74E0.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 
 ## 🗣️ About this project
 
