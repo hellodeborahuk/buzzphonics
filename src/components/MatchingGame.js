@@ -5,7 +5,7 @@ import { pointsContext } from "./PointsProvider";
 
 const MatchingGame = () => {
   const navigate = useNavigate();
-  const [points, incrementPoints] = useContext(pointsContext);
+  const [incrementPoints] = useContext(pointsContext);
 
   const sounds = [
         { id: 1, letter: "h", icon: "hat" },
