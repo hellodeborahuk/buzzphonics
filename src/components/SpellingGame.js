@@ -18,7 +18,7 @@ const SpellingGame = () => {
         const localSounds = [...sounds]
         // Shuffle sounds from sound array
         localSounds.sort(() => Math.random() - 0.5)
-        // Pick 2 random sounds that are unique
+        // Pick 3 random sounds that are unique
        let randomSounds = []
        while(randomSounds.length < 3) {
             const pickedSound = localSounds.pop()
