@@ -2,6 +2,7 @@ import { MdArrowBackIosNew } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import {sounds} from "./Sounds"
 import { useState } from "react"
+import { pointsContext } from "./PointsProvider";
 
 const SpellingGame = () => {
     const navigate = useNavigate()
@@ -41,14 +42,61 @@ const SpellingGame = () => {
         cardDeck.sort(() => Math.random() - 0.5).slice(0,3).map(item => setupDeck(item))
     )
     const [currentCard, setCurrentCard] = useState(0)
+    const [currentPosition, setCurrentPosition] = useState(0)
+    const [cantContinue, setCantContinue] = useState(true)
+    const [displayEndPage, setdisplayEndPage] = useState(false)
+    const incrementalPoints = useContext(pointsContext)[1]
+
+    const handleCardClick = (sound) => {
+        const current = deck[currentCard]
+        const nextSound = current.sounds[currentPosition]
+
+        if (nextSound.sound === sound) {
+            deck[currentCard].sounds[currentPosition].found = true;
+            setCurrentPosition(currentPosition + 1)
+        }
+
+        // check if we have completed current word
+        if (currentPosition >= deck[currentCard].sounds.length - 1) {
+            setCantContinue(false)
+        }
+    }
+
+    const handleNext = () => {
+        // check current deck is complete
+        if (currentCard < deck.length - 1) {
+          setCurrentCard(currentCard + 1)
+          setCurrentPosition(0)
+          setCantContinue(true)
+        } else {
+          setdisplayEndPage(true)
+          incrementPoints()
+        }
+    }
+
+    const newGame = () => {
+        setDeck(cardDeck.sort(() => Math.random() - 0.5).slice(0,3).map(item => setupDeck(item)))
+        setCurrentCard(0)
+        setCurrentPosition(0)
+        setCantContinue(true)
+        setdisplayEndPage(false)
+    }
 
     return ( 
         <section>
                 <header>    
                 <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
-                <h1>Phase Two Quiz</h1>
+                <h1>Spelling Game</h1>
             </header>
-          
+            {displayEndPage ? (
+                <div className="well-done">   
+                <h1>Well done!</h1>
+                   <span className="well-done-icon animate-beat">🎉</span>
+                   <button className="new-game-btn" onClick={newGame}>New Game</button>
+
+                </div>
+            ) : (
+                <>
                 <div className="quiz-container">
                     <div className="quiz-image-container">
                         <img className="quiz-image" src={`../images/quiz-images/${deck[currentCard].image}.png`} alt={deck[currentCard].image} />
@@ -56,7 +104,7 @@ const SpellingGame = () => {
                     <div className="quiz-options">
                     {deck[currentCard].sounds.map((answer, index) => {               
                                                      return (
-                                                         <div className="sound">
+                                                         <div className="sound" key={`sound_${index}`}>
                                                              <p>{answer.found ? answer.sound : "_"}</p>
                                                      </div>
                                                      )})
@@ -65,16 +113,17 @@ const SpellingGame = () => {
                     <div className="spelling-sounds">
                     {deck[currentCard].cards.map((options, index) => {               
                                                      return (
-                                                         <div className="sound">
+                                                         <div className="sound" key={`spelling${index}`} onClick={() => handleCardClick(options)}>
                                                              <p>{options}</p>
                                                      </div>
                                                      )})
                         }
                     </div>
-                    <button className="next-btn">Next</button>    
+                    <button className="next-btn" disabled={cantContinue} onClick={handleNext}>Next</button>    
                 </div>
                 <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></footer>
-    
+               </>
+                )}
         </section> 
     );
 }
