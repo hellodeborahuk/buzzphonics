@@ -17,7 +17,7 @@ const Games = () => {
                   </Link>
                   <Link to="matchingGame">
                   <div className="games-button two">
-                        <h2>Matching Game</h2>
+                        <h2>Matching Pairs</h2>
                         <p>Phase 2</p>
                    </div>
                   </Link>
@@ -25,6 +25,11 @@ const Games = () => {
                   <div className="games-button two">
                         <h2>Spelling Game</h2>
                         <p>Phase 2</p>
+                  </Link>
+                  <Link to="readingGame">
+                  <div className="games-button three">
+                        <h2>Reading Game</h2>
+                        <p>Phase 3</p>
                    </div>
                   </Link>
                   <Points />

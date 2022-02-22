@@ -11,6 +11,7 @@ import MatchingGame from "./components/MatchingGame"
 import SpellingGame from "./components/SpellingGame"
 import Games from "./components/Games"
 import PointsProvider  from './components/PointsProvider';
+import ReadingGame from "./components/ReadingGame"
 
 render(
   <BrowserRouter>
@@ -23,6 +24,7 @@ render(
           <Route path="games/phaseTwoQuiz" element={<PhaseTwoQuiz />} />
           <Route path="games/matchingGame" element={<MatchingGame />} />
           <Route path="games/spellingGame" element={<SpellingGame />} />
+          <Route path="games/readingGame" element={<ReadingGame />} />
        </Routes>
        </PointsProvider>
   </BrowserRouter>,

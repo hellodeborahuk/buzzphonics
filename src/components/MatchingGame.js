@@ -5,7 +5,7 @@ import { pointsContext } from "./PointsProvider";
 
 const MatchingGame = () => {
   const navigate = useNavigate();
-  const [points, incrementPoints] = useContext(pointsContext);
+  const incrementalPoints = useContext(pointsContext)[1]
 
   const sounds = [
         { id: 1, letter: "h", icon: "hat" },
@@ -69,7 +69,7 @@ const MatchingGame = () => {
             )
           if (matched.length === 5) {
               setFinished(wellDone)
-              incrementPoints()
+              incrementalPoints()
           }
 
           return merged

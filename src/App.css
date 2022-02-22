@@ -166,12 +166,16 @@ footer {
 .games-button {
   border-radius: 16px;
   width: 200px;
-  height: 130px;
+  height: 100px;
   margin: 2em auto;
   padding: 1em;
   text-align: left;
-  background-color: var(--green);
+  background-color: var(--pink);
   transition: all .2s ease-in-out;
+}
+
+.games-button h2 {
+  font-size: 1.35rem;
 }
 
 .games-button:hover {
@@ -179,6 +183,11 @@ transform: scale(1.1);
 }
 
 .two {
+  background-color: var(--light-blue);
+  color: black;
+}
+
+.three {
   background-color: var(--purple);
 }
 
@@ -407,4 +416,29 @@ transform: scale(1.1);
   margin: 0.5em auto 1em;
   gap: 0.75em;
   width: 200px;
+  }
+
+  /* =================== READING GAME =================== */
+
+  .reading-game-word {
+    width: 100%;
+    padding: 0.5em;
+    background-color: var(--blue);
+    border-radius: 16px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .reading-card {
+    width: 57px;
+    height: 57px;
+    background-color: var(--light-blue);
+  }
+  .reading-images {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
