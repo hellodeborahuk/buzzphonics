@@ -406,6 +406,18 @@ transform: scale(1.1);
     content: '';
   }
 
+  /* ================= SPELLING GAME ================ */
+
+  .spelling-sounds {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em auto 1em;
+  gap: 0.75em;
+  width: 200px;
+  }
+
   /* =================== READING GAME =================== */
 
   .reading-game-word {
@@ -430,5 +442,3 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
   }
-
- 
