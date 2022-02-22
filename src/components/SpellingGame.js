@@ -2,7 +2,6 @@ import { MdArrowBackIosNew } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import {sounds} from "./Sounds"
 import { useState } from "react"
-import { pointsContext } from "./PointsProvider";
 
 const SpellingGame = () => {
     const navigate = useNavigate()
@@ -45,7 +44,6 @@ const SpellingGame = () => {
     const [currentPosition, setCurrentPosition] = useState(0)
     const [cantContinue, setCantContinue] = useState(true)
     const [displayEndPage, setdisplayEndPage] = useState(false)
-    const incrementalPoints = useContext(pointsContext)[1]
 
     const handleCardClick = (sound) => {
         const current = deck[currentCard]
@@ -70,7 +68,6 @@ const SpellingGame = () => {
           setCantContinue(true)
         } else {
           setdisplayEndPage(true)
-          incrementPoints()
         }
     }
 
