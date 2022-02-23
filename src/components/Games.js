@@ -6,8 +6,9 @@ const Games = () => {
     const navigate = useNavigate()
     return ( 
         <section>
-             <header>    
-             <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>                <h1>Games</h1>
+            <header>    
+                  <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>                
+                  <h1>Games</h1>
             </header>
                    <Link to="phaseTwoQuiz">
                   <div className="games-button one">
@@ -30,6 +31,12 @@ const Games = () => {
                   <Link to="readingGame">
                   <div className="games-button three">
                         <h2>Reading Game</h2>
+                        <p>Phase 3</p>
+                   </div>
+                  </Link>
+                  <Link to="spellingGame2">
+                  <div className="games-button five">
+                        <h2>Spelling Game 2</h2>
                         <p>Phase 3</p>
                    </div>
                   </Link>

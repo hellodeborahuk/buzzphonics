@@ -30,12 +30,12 @@ const PhaseTwoQuiz= () => {
             },
             {
                 id: 2,
-                image: "fox",
-                alt: "fox",
+                image: "umbrella",
+                alt: "umbrella",
                 answerOptions: [
                     {answerText: "a", isCorrect: false},
-                    {answerText: "f", isCorrect: true},
-                    {answerText: "p", isCorrect: false},
+                    {answerText: "u", isCorrect: true},
+                    {answerText: "b", isCorrect: false},
                 ]
             },
             {

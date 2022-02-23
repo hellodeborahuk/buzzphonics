@@ -166,16 +166,16 @@ footer {
 .games-button {
   border-radius: 16px;
   width: 200px;
-  height: 100px;
+  height: 85px;
   margin: 2em auto;
   padding: 1em;
   text-align: left;
-  background-color: var(--pink);
+  background-color: var(--purple);
   transition: all .2s ease-in-out;
 }
 
 .games-button h2 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 .games-button:hover {
@@ -188,13 +188,16 @@ transform: scale(1.1);
 }
 
 .three {
-  background-color: var(--purple);
+  background-color: var(--pink);
+  color: black;
 }
 
 .four {
   background-color: var(--green);
 }
-
+.five {
+  background-color: var(--blue);
+}
 /* ============== PHASE TWO QUIZ ============= */
 
 .quiz-image-container {

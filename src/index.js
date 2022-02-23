@@ -9,6 +9,7 @@ import PhaseThree from "./components/PhaseThree"
 import PhaseTwoQuiz from "./components/PhaseTwoQuiz"
 import MatchingGame from "./components/MatchingGame"
 import SpellingGame from "./components/SpellingGame"
+import SpellingGame2 from "./components/SpellingGame2..js"
 import Games from "./components/Games"
 import PointsProvider  from './components/PointsProvider';
 import ReadingGame from "./components/ReadingGame"
@@ -25,6 +26,7 @@ render(
           <Route path="games/matchingGame" element={<MatchingGame />} />
           <Route path="games/spellingGame" element={<SpellingGame />} />
           <Route path="games/readingGame" element={<ReadingGame />} />
+          <Route path="games/spellingGame2" element={<SpellingGame2 />} />
        </Routes>
        </PointsProvider>
   </BrowserRouter>,

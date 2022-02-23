@@ -4,20 +4,22 @@ import {sounds} from "./Sounds"
 import { useState, useContext } from "react"
 import { pointsContext } from "./PointsProvider";
 
-const SpellingGame = () => {
+const SpellingGame2 = () => {
     const navigate = useNavigate()
 
     const cardDeck =  [
-            {word: "cat", sounds: ["c", "a", "t"]},
-            {word: "map", sounds: ["m", "a", "p"]},
-            {word: "bus", sounds: ["b", "u", "s"]},
-            {word: "duck", sounds: ["d", "u", "ck"]},
-            {word: "pen", sounds: ["p", "e", "n"]},
-            {word: "sun", sounds: ["s", "u", "n"]},
-            {word: "pig", sounds: ["p", "i", "g"]},
-            {word: "bat", sounds: ["b", "a", "t"]},
-            {word: "socks", sounds: ["s", "o", "ck", "s"]},
-            {word: "crab", sounds: ["c", "r", "a", "b"]},
+            {word: "hair", sounds: ["h", "ai", "r"]},
+            {word: "fox", sounds: ["f", "o", "x"]},
+            {word: "shell", sounds: ["sh", "e", "ll"]},
+            {word: "queen", sounds: ["qu", "ee", "n"]},
+            {word: "tree", sounds: ["t", "r", "ee"]},
+            {word: "cow", sounds: ["c", "o", "w"]},
+            {word: "star", sounds: ["s", "t", "ar"]},
+            {word: "book", sounds: ["b", "oo", "k"]},
+            {word: "boat", sounds: ["b", "oa", "t"]},
+            {word: "sheep", sounds: ["sh", "ee", "p"]},
+            {word: "fish", sounds: ["f", "i", "sh"]},
+            {word: "ring", sounds: ["r", "i", "ng"]},
         ]
 
     function setupDeck(input) {
@@ -90,7 +92,7 @@ const SpellingGame = () => {
         <section>
                 <header>    
                 <p onClick={() => navigate(-1)}><MdArrowBackIosNew className="back-arrow" /></p>
-                <h1>Spelling Game</h1>
+                <h1>Spelling Game 2</h1>
             </header>
             {displayEndPage ? (
                 <div className="well-done">   
@@ -103,7 +105,7 @@ const SpellingGame = () => {
                 <>
                 <div className="quiz-container">
                     <div className="quiz-image-container">
-                        <img className="quiz-image" src={`../images/quiz-images/${deck[currentCard].word}.png`} alt={deck[currentCard].word} />
+                        <img className="quiz-image" src={`../images/phase3-images/${deck[currentCard].word}.png`} alt={deck[currentCard].word} />
                     </div>
                     <div className="quiz-options">
                     {deck[currentCard].sounds.map((answer, index) => {               
@@ -132,4 +134,4 @@ const SpellingGame = () => {
     );
 }
  
-export default SpellingGame;
+export default SpellingGame2;
