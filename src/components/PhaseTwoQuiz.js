@@ -88,6 +88,26 @@ const PhaseTwoQuiz= () => {
                     {answerText: "b", isCorrect: true},
                 ]
             },
+            {
+                id: 8,
+                image: "pig",
+                alt: "pig",
+                answerOptions: [
+                    {answerText: "t", isCorrect: false},
+                    {answerText: "g", isCorrect: false},
+                    {answerText: "p", isCorrect: true},
+                ]
+            },
+            {
+                id: 9,
+                image: "socks",
+                alt: "socks",
+                answerOptions: [
+                    {answerText: "s", isCorrect: true},
+                    {answerText: "k", isCorrect: false},
+                    {answerText: "o", isCorrect: false},
+                ]
+            },
         ].sort(() => Math.random() - 0.5).slice(0,5)
     }
 
