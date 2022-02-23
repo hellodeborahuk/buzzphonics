@@ -8,11 +8,17 @@ const SpellingGame = () => {
     const navigate = useNavigate()
 
     const cardDeck =  [
-            {word: "cat", sounds: ["c", "a", "t"], image: "cat"},
-            {word: "map", sounds: ["m", "a", "p"], image: "map"},
-            {word: "fox", sounds: ["f", "o", "x"], image: "fox"},
-            {word: "bus", sounds: ["b", "u", "s"], image: "bus"},
-            {word: "duck", sounds: ["d", "u", "ck"], image: "duck"},
+            {word: "cat", sounds: ["c", "a", "t"]},
+            {word: "map", sounds: ["m", "a", "p"]},
+            {word: "fox", sounds: ["f", "o", "x"]},
+            {word: "bus", sounds: ["b", "u", "s"]},
+            {word: "duck", sounds: ["d", "u", "ck"]},
+            {word: "pen", sounds: ["p", "e", "n"]},
+            {word: "sun", sounds: ["s", "u", "n"]},
+            {word: "pig", sounds: ["p", "i", "g"]},
+            {word: "bat", sounds: ["b", "a", "t"]},
+            {word: "socks", sounds: ["s", "o", "ck", "s"]},
+            {word: "crab", sounds: ["c", "r", "a", "b"]},
         ]
 
     function setupDeck(input) {
@@ -55,7 +61,6 @@ const SpellingGame = () => {
             deck[currentCard].sounds[currentPosition].found = true;
             setCurrentPosition(currentPosition + 1)
         }
-
         // check if we have completed current word
         if (currentPosition >= deck[currentCard].sounds.length - 1) {
             setCantContinue(false)
@@ -99,7 +104,7 @@ const SpellingGame = () => {
                 <>
                 <div className="quiz-container">
                     <div className="quiz-image-container">
-                        <img className="quiz-image" src={`../images/quiz-images/${deck[currentCard].image}.png`} alt={deck[currentCard].image} />
+                        <img className="quiz-image" src={`../images/quiz-images/${deck[currentCard].word}.png`} alt={deck[currentCard].word} />
                     </div>
                     <div className="quiz-options">
                     {deck[currentCard].sounds.map((answer, index) => {               
