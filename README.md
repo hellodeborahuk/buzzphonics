@@ -1,5 +1,5 @@
 
-# phonics-sounds
+# buzzphonics 
 
 ![buzzphonics-walkthrough](https://user-images.githubusercontent.com/29425781/155540581-90c66b69-290d-49df-abc9-429ab509513d.gif)
 
