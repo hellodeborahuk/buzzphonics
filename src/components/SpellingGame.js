@@ -25,25 +25,22 @@ const SpellingGame = () => {
         // Shuffle sounds from sound array
         localSounds.sort(() => Math.random() - 0.5)
         // Pick 3 random sounds that are unique
-        //copy input.sounds and turn into set
-        //off set find out length, then while loop
-       let randomSounds = []
-       let limit = 6 - input.sounds.length
-       if (limit > 0) {
+        let uniqueLocalSounds = [...new Set(input.sounds)]
+        let randomSounds = []
+        let limit = 6 - uniqueLocalSounds.length
+        if (limit > 0) {
         while(randomSounds.length < limit) {
                 const pickedSound = localSounds.pop()
-                if (!input.sounds.find(sound => sound === pickedSound.sound)) {
+                if (!uniqueLocalSounds.find(sound => sound === pickedSound.sound)) {
                     randomSounds.push(pickedSound.letter)
                 }
+            }
         }
-    }
-
-
        let ret = {...input}
        ret.sounds = ret.sounds.map(item => {
            return {sound: item, found: false}
        })
-       ret.cards = [...input.sounds, ...randomSounds]
+       ret.cards = [...uniqueLocalSounds, ...randomSounds]
        ret.cards.sort(() => Math.random() - 0.5)
        return ret
     } 
