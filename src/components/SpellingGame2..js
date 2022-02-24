@@ -8,7 +8,6 @@ const SpellingGame2 = () => {
     const navigate = useNavigate()
 
     const cardDeck =  [
-            {word: "hair", sounds: ["h", "ai", "r"]},
             {word: "fox", sounds: ["f", "o", "x"]},
             {word: "shell", sounds: ["sh", "e", "ll"]},
             {word: "queen", sounds: ["qu", "ee", "n"]},
@@ -27,13 +26,16 @@ const SpellingGame2 = () => {
         // Shuffle sounds from sound array
         localSounds.sort(() => Math.random() - 0.5)
         // Pick 3 random sounds that are unique
-       let randomSounds = []
-       while(randomSounds.length < 3) {
-            const pickedSound = localSounds.pop()
-            if (!input.sounds.find(sound => sound === pickedSound.sound)) {
-                randomSounds.push(pickedSound.letter)
-            }
-       }
+        let randomSounds = []
+        let limit = 6 - input.sounds.length
+        if (limit > 0) {
+         while(randomSounds.length < limit) {
+                 const pickedSound = localSounds.pop()
+                 if (!input.sounds.find(sound => sound === pickedSound.sound)) {
+                     randomSounds.push(pickedSound.letter)
+                 }
+         }
+     }
 
        let ret = {...input}
        ret.sounds = ret.sounds.map(item => {
