@@ -1,7 +1,7 @@
 
 # phonics-sounds
 
-![Sounds-preview](https://user-images.githubusercontent.com/29425781/153875788-5cf5d186-478e-4de6-b6b6-203ea494c57d.gif)
+![buzzphonics-walkthrough](https://user-images.githubusercontent.com/29425781/155540581-90c66b69-290d-49df-abc9-429ab509513d.gif)
 
 ## 👨‍💻 Demo
 
