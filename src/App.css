@@ -198,6 +198,7 @@ transform: scale(1.1);
 .five {
   background-color: var(--blue);
 }
+
 /* ============== PHASE TWO QUIZ ============= */
 
 .quiz-image-container {
@@ -376,9 +377,9 @@ transform: scale(1.1);
   margin-top: 1em;
 }
 
-.new-game-btn {
+.new-game-btn, .back-to-games-btn {
   display: block;
-  margin: 1em auto;
+  margin: 1em auto 0;
   background-color: var(--pink);
   padding: 0.75em 2em;
   border: none;
@@ -388,9 +389,23 @@ transform: scale(1.1);
   transition: all .2s ease-in-out;
 }
 
-.new-game-btn:hover {
+.new-game-btn:hover, .back-to-games-btn:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.back-to-games-btn {
+  color: black;
+  background-color: var(--light-blue);
+  padding: 0.75em 1.25em;
+  margin-top: 0;
+  text-align: center;
+  width: 160px;
+}
+
+.matching-game-games-btn {
+  margin-top: 1em;
+  background-color: var(--green);
 }
 
 .hexagon {

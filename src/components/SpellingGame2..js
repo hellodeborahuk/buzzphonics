@@ -8,17 +8,17 @@ const SpellingGame2 = () => {
     const navigate = useNavigate()
 
     const cardDeck =  [
-            {word: "fox", sounds: ["f", "o", "x"]},
-            {word: "shell", sounds: ["sh", "e", "ll"]},
-            {word: "queen", sounds: ["qu", "ee", "n"]},
-            {word: "tree", sounds: ["t", "r", "ee"]},
-            {word: "cow", sounds: ["c", "o", "w"]},
-            {word: "star", sounds: ["s", "t", "ar"]},
-            {word: "book", sounds: ["b", "oo", "k"]},
-            {word: "boat", sounds: ["b", "oa", "t"]},
-            {word: "sheep", sounds: ["sh", "ee", "p"]},
-            {word: "fish", sounds: ["f", "i", "sh"]},
-            {word: "ring", sounds: ["r", "i", "ng"]},
+        {word: "fox", sounds: ["f", "o", "x"]},
+        {word: "shell", sounds: ["sh", "e", "ll"]},
+        {word: "queen", sounds: ["qu", "ee", "n"]},
+        {word: "tree", sounds: ["t", "r", "ee"]},
+        {word: "cow", sounds: ["c", "o", "w"]},
+        {word: "star", sounds: ["s", "t", "ar"]},
+        {word: "book", sounds: ["b", "oo", "k"]},
+        {word: "boat", sounds: ["b", "oa", "t"]},
+        {word: "sheep", sounds: ["sh", "ee", "p"]},
+        {word: "fish", sounds: ["f", "i", "sh"]},
+        {word: "ring", sounds: ["r", "i", "ng"]},
         ]
 
     function setupDeck(input) {
@@ -26,24 +26,23 @@ const SpellingGame2 = () => {
         // Shuffle sounds from sound array
         localSounds.sort(() => Math.random() - 0.5)
         // Pick 3 random sounds that are unique
+        let uniqueLocalSounds = [...new Set(input.sounds)]
         let randomSounds = []
-        let limit = 6 - input.sounds.length
+        let limit = 6 - uniqueLocalSounds.length
         if (limit > 0) {
-         while(randomSounds.length < limit) {
-                 const pickedSound = localSounds.pop()
-                 if (!input.sounds.find(sound => sound === pickedSound.sound)) {
-                     randomSounds.push(pickedSound.letter)
-                 }
-         }
-     }
-
+        while(randomSounds.length < limit) {
+                const pickedSound = localSounds.pop()
+                if (!uniqueLocalSounds.find(sound => sound === pickedSound.sound)) {
+                    randomSounds.push(pickedSound.letter)
+                }
+            }
+        }
        let ret = {...input}
        ret.sounds = ret.sounds.map(item => {
            return {sound: item, found: false}
        })
-       ret.cards = [...input.sounds, ...randomSounds]
+       ret.cards = [...uniqueLocalSounds, ...randomSounds]
        ret.cards.sort(() => Math.random() - 0.5)
-       console.log(ret)
        return ret
     } 
 
@@ -100,8 +99,8 @@ const SpellingGame2 = () => {
                 <div className="well-done">   
                 <h1>Well done!</h1>
                    <span className="well-done-icon animate-beat">🎉</span>
-                   <button className="new-game-btn" onClick={newGame}>New Game</button>
-
+                   <button className="new-game-btn" onClick={newGame}>Play again</button>
+                   <div className="back-to-games-btn" onClick={() => navigate(-1)}>Back to Games</div>
                 </div>
             ) : (
                 <>

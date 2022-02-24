@@ -64,7 +64,8 @@ const MatchingGame = () => {
           const wellDone = (
               <>
                 <h1 className="finished-game">Well done! 🎉</h1>
-                <button className="new-game-btn" onClick={newGame}>New Game</button>
+                <button className="new-game-btn" onClick={newGame}>Play again</button>
+                <div className="back-to-games-btn matching-game-games-btn" onClick={() => navigate(-1)}>Back to Games</div>
               </>
             )
           if (matched.length === 5) {

@@ -149,8 +149,8 @@ const ReadingGame= () => {
                 <div className="well-done">   
                 <h1>Well done!</h1>
                    <span className="well-done-icon animate-beat">🎉</span>
-                   <button className="new-game-btn" onClick={newGame}>New Game</button>
-
+                   <button className="new-game-btn" onClick={newGame}>Play again</button>
+                  <div className="back-to-games-btn" onClick={() => navigate(-1)}>Back to Games</div>
                 </div>
             ) : (
                 <>
