@@ -401,6 +401,7 @@ transform: scale(1.1);
   margin-top: 0;
   text-align: center;
   width: 160px;
+  font-size: 1rem;
 }
 
 .matching-game-games-btn {
