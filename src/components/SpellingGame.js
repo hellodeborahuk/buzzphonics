@@ -25,24 +25,26 @@ const SpellingGame = () => {
         // Shuffle sounds from sound array
         localSounds.sort(() => Math.random() - 0.5)
         // Pick 3 random sounds that are unique
-        let uniqueLocalSounds = [...new Set(input.sounds)]
-        let randomSounds = []
-        let limit = 6 - uniqueLocalSounds.length
-        if (limit > 0) {
-        while(randomSounds.length < limit) {
+        let uniqueLocalSounds = new Set(input.sounds)
+        while(uniqueLocalSounds.size < 6) {
                 const pickedSound = localSounds.pop()
-                if (!uniqueLocalSounds.find(sound => sound === pickedSound.sound)) {
-                    randomSounds.push(pickedSound.letter)
-                }
+                uniqueLocalSounds.add(pickedSound.letter)
             }
-        }
-       let ret = {...input}
-       ret.sounds = ret.sounds.map(item => {
-           return {sound: item, found: false}
-       })
-       ret.cards = [...uniqueLocalSounds, ...randomSounds]
-       ret.cards.sort(() => Math.random() - 0.5)
-       return ret
+
+        // copy input into ret, so that we don't edit input    
+        let ret = {...input}
+
+        // sounds is equal to the sounds in the word, map them to say they've not been found
+        // when the player clicks on the sound, we check to see if the next sound in the word equals it
+        ret.sounds = ret.sounds.map(item => {
+              return {sound: item, found: false}
+            })
+        // convert set into array and shuffle cards
+        ret.cards = [...uniqueLocalSounds]
+        ret.cards.sort(() => Math.random() - 0.5)
+
+        // return data for this round
+        return ret
     } 
 
     const [deck, setDeck] = useState(
