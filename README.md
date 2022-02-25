@@ -5,7 +5,7 @@
 
 ## 👨‍💻 Demo
 
-Check out the website: [buzzphonics](https://focused-swirles-0bc3a1.netlify.app/)
+Check out the website: [buzzphonics](https://www.buzzphonics.com/)
 
 ## Tech used
 
