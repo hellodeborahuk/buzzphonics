@@ -1,15 +1,19 @@
 
 # buzzphonics 
 
+![buzzphonics-pages](https://user-images.githubusercontent.com/29425781/156545812-f28fb36f-5ac0-43ec-93ef-7ae5a9f72882.png)
+
 ![buzzphonics-walkthrough](https://user-images.githubusercontent.com/29425781/155540581-90c66b69-290d-49df-abc9-429ab509513d.gif)
 
 ## 👨‍💻 Demo
 
-Check out the website: [buzzphonics](https://focused-swirles-0bc3a1.netlify.app/)
+Check out the website: [buzzphonics](https://www.buzzphonics.com/)
 
 ## Tech used
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5-%2311C684.svg?style=for-the-badge&logo=html5&logoColor=140200"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%23F878B5.svg?style=for-the-badge&logo=css3&logoColor=140200"/> <img alt="React" src="https://img.shields.io/badge/react-%236B74E0.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img alt="React router" src="https://img.shields.io/badge/reactrouter-%230671D5.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+
+Icons made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](www.flaticon.com).
 
 ## 🗣️ About this project
 
