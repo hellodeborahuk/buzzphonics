@@ -1,6 +1,8 @@
 
 # buzzphonics 
 
+![buzzphonics-pages](https://user-images.githubusercontent.com/29425781/156545812-f28fb36f-5ac0-43ec-93ef-7ae5a9f72882.png)
+
 ![buzzphonics-walkthrough](https://user-images.githubusercontent.com/29425781/155540581-90c66b69-290d-49df-abc9-429ab509513d.gif)
 
 ## 👨‍💻 Demo
