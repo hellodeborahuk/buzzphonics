@@ -29,10 +29,10 @@ I want to create a phonics sound page that I can save on my phone and have to ha
 ## 👨‍💻 Contributing
 
 - Any contributions you make are **greatly appreciated**.
-- Check out my [contribution guidelines](https://github.com/hellodeborahuk/phonics-sounds/blob/main/Contributing.md) for more information.
+- Check out my [contribution guidelines](https://github.com/hellodeborahuk/buzzphonics/blob/main/Contributing.md) for more information.
 
 ## 🛡️ License
-Phonics sounds is licensed under the MIT License - see the [LICENSE file](https://github.com/hellodeborahuk/phonics-sounds/blob/main/LICENSE) for details.
+Phonics sounds is licensed under the MIT License - see the [LICENSE file](https://github.com/hellodeborahuk/buzzphonics/blob/main/LICENSE) for details.
 
 ## 👇 Prerequisites
 
@@ -44,7 +44,7 @@ Before installation, please make sure you have already installed following tools
 
 1. Fork the project
 2. Clone the project
-3. Navigate to the project directory `cd phonics-sounds`
+3. Navigate to the project directory `cd buzzphonics`
 4. Install dependencies with `npm install`
 5. Run `npm start`
 
