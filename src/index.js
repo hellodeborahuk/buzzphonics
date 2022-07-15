@@ -6,6 +6,7 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import PhaseTwo from './components/PhaseTwo';
 import PhaseThree from "./components/PhaseThree"
+import PhaseFive from "./components/PhaseFive"
 import PhaseTwoQuiz from "./components/PhaseTwoQuiz"
 import MatchingGame from "./components/MatchingGame"
 import SpellingGame from "./components/SpellingGame"
@@ -21,6 +22,7 @@ render(
           <Route path="/" element={<App />} />
           <Route path="phaseTwo" element={<PhaseTwo />} />
           <Route path="phaseThree" element={<PhaseThree />} />
+          <Route path="phaseFive" element={<PhaseFive />} />
           <Route path="games" element={<Games />} />
           <Route path="games/phaseTwoQuiz" element={<PhaseTwoQuiz />} />
           <Route path="games/matchingGame" element={<MatchingGame />} />
