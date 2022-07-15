@@ -9,6 +9,27 @@ const SpellingGame3 = () => {
 
     const cardDeck =  [
             {word: "tray", sounds: ["t", "r", "ay"]},
+            {word: "beads", sounds: ["b", "ea", "d", "s"]},
+            {word: "bird", sounds: ["b", "ir", "d"]},
+            {word: "bone", sounds: ["b", "o", "n", "e"]},
+            {word: "boy", sounds: ["b", "oy"]},
+            {word: "cake", sounds: ["c", "a", "k", "e"]},
+            {word: "cloud", sounds: ["c", "l", "ou", "d"]},
+            {word: "cube", sounds: ["c", "u", "b", "e"]},
+            {word: "dolphin", sounds: ["d", "o", "l", "ph", "i", "n"]},
+            {word: "flute", sounds: ["f", "l", "u", "t", "e"]},
+            {word: "gene", sounds: ["g", "e", "n", "e"]},
+            {word: "glue", sounds: ["g", "l", "ue"]},
+            {word: "money", sounds: ["m", "o", "n", "ey"]},
+            {word: "paw", sounds: ["p", "aw"]},
+            {word: "pew", sounds: ["p", "ew"]},
+            {word: "queue", sounds: ["qu", "e", "ue"]},
+            {word: "sauce", sounds: ["s", "au", "c", "e"]},
+            {word: "screw", sounds: ["s", "c", "r", "ew"]},
+            {word: "slide", sounds: ["s", "l", "i", "d", "e"]},
+            {word: "tie", sounds: ["t", "ie"]},
+            {word: "toe", sounds: ["t", "oe"]},
+            {word: "wheel", sounds: ["wh", "ee", "l"]},
         ]
 
 // sounds comes from Sounds.js, create new one with all those plus phase 5.
