@@ -114,7 +114,7 @@ header {
   background-color: var(--pink);
 }
 
-.dove, .feather {
+.dove, .feather, .butterfly {
   font-size: 3.5rem;
   margin-top: auto;
 }
