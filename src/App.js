@@ -31,15 +31,6 @@ function App() {
                       <FaFeatherAlt className="feather" />
                     </div>
                   </Link>
-                  <Link to="phaseFive">
-                  <div className="phase-five">
-                      <div> 
-                        <h2>Phase 5</h2>
-                        <p>? Sounds</p>
-                      </div>
-                      <FaFeatherAlt className="feather" />
-                    </div>
-                  </Link>
                   <Link to="games">
                   <div className="quiz-button">
                       <div> 

@@ -83,7 +83,7 @@ header {
   padding-bottom: 0.5em;
 }
 
-.phase-two, .phase-three, .phase-five, .quiz-button, .game-button  {
+.phase-two, .phase-three, .quiz-button, .game-button  {
     border-radius: 16px;
     width: 200px;
     height: 130px;
@@ -94,7 +94,7 @@ header {
 }
 
 
-.phase-two:hover, .phase-three:hover, phase-five:hover, .quiz-button:hover  {
+.phase-two:hover, .phase-three:hover, .quiz-button:hover  {
   transform: scale(1.1);
 }
 
@@ -104,10 +104,6 @@ header {
 
 .phase-three {
   background-color: var(--purple);
-}
-
-.phase-five {
-  background-color: var(--light-blue)
 }
 
 .quiz-button {
