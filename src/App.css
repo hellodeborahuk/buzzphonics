@@ -99,15 +99,15 @@ header {
 }
 
 .phase-two {
-    background-color: var(--green);
+    background-color: var(--purple);
 }
 
 .phase-three {
-  background-color: var(--purple);
+  background-color: var(--green);
 }
 
 .phase-five {
-  background-color: var(--light-blue);
+  background-color: var(--blue);
 }
 
 .quiz-button {
@@ -135,7 +135,9 @@ header {
   margin: 2em auto;
   gap: 0.75em;
   width: 200px;
+  padding-bottom: 2em;
 }
+
 
 .sound {
   background-color: var(--pink);
@@ -157,6 +159,10 @@ header {
 .sound-icon {
   width: 30px; 
   padding: 6px 0;
+}
+
+.sound-p5 {
+  width: 40%;
 }
 
 footer {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { MdArrowBackIosNew } from "react-icons/md"
 
-const PhaseThree = () => {
+const PhaseFive = () => {
     const navigate = useNavigate()
     const sounds = [
         {
@@ -92,7 +92,7 @@ const PhaseThree = () => {
                     // get random item from alternatingColor
                     const randomElement = {backgroundColor: alternatingColor[Math.floor(Math.random() * alternatingColor.length)]}
                     // apply to below as style...   
-                    return (<div className="sound" style={randomElement} onClick={start}><p>{sound.sound}</p></div>);
+                    return (<div className="sound sound-p5" style={randomElement} onClick={start}><p>{sound.sound}</p></div>);
                 })
             }
             </div>
