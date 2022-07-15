@@ -40,6 +40,12 @@ const Games = () => {
                         <p>Phase 3</p>
                    </div>
                   </Link>
+                  <Link to="spellingGame3">
+                  <div className="games-button one">
+                        <h2>Spelling Game 2</h2>
+                        <p>Phase 3</p>
+                   </div>
+                  </Link>
                   <Points />
         </section>
      );
