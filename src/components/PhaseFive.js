@@ -84,7 +84,7 @@ const PhaseFive = () => {
             <div className="sound-container">
             {
                 sounds.map((sound, index) => {
-                    let audio = new Audio(`/sounds/${sound.sound}.m4a`)
+                    let audio = new Audio(`/sounds/Phase5/${sound.sound}.m4a`)
 
                     const start = () => {
                         audio.play()
