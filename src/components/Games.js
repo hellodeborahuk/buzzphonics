@@ -42,8 +42,8 @@ const Games = () => {
                   </Link>
                   <Link to="spellingGame3">
                   <div className="games-button one">
-                        <h2>Spelling Game 2</h2>
-                        <p>Phase 3</p>
+                        <h2>Spelling Game 3</h2>
+                        <p>Phase 5</p>
                    </div>
                   </Link>
                   <Points />
