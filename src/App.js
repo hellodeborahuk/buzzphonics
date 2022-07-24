@@ -2,6 +2,7 @@ import './App.css';
 import { FaDove } from 'react-icons/fa';
 import {FaFeatherAlt} from "react-icons/fa"
 import {GiTwirlyFlower} from "react-icons/gi"
+import {GiButterfly} from "react-icons/gi"
 import { Link } from "react-router-dom";
 import Greeting from './components/Greeting';
 import Points from "./components/Points"
@@ -29,6 +30,15 @@ function App() {
                         <p>25 Letters</p>
                       </div>
                       <FaFeatherAlt className="feather" />
+                    </div>
+                  </Link>
+                  <Link to="phaseFive">
+                    <div className="phase-five">
+                      <div>
+                        <h2>Phase 5</h2>
+                        <p>22 Sounds</p>
+                      </div>
+                      <GiButterfly className="butterfly" />
                     </div>
                   </Link>
                   <Link to="games">

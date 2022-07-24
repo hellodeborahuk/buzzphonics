@@ -83,7 +83,7 @@ header {
   padding-bottom: 0.5em;
 }
 
-.phase-two, .phase-three, .quiz-button, .game-button  {
+.phase-two, .phase-three, .phase-five, .quiz-button, .game-button  {
     border-radius: 16px;
     width: 200px;
     height: 130px;
@@ -94,23 +94,27 @@ header {
 }
 
 
-.phase-two:hover, .phase-three:hover, .quiz-button:hover  {
+.phase-two:hover, .phase-three:hover, .phase-five:hover, .quiz-button:hover  {
   transform: scale(1.1);
 }
 
 .phase-two {
-    background-color: var(--green);
+    background-color: var(--purple);
 }
 
 .phase-three {
-  background-color: var(--purple);
+  background-color: var(--green);
+}
+
+.phase-five {
+  background-color: var(--blue);
 }
 
 .quiz-button {
   background-color: var(--pink);
 }
 
-.dove, .feather {
+.dove, .feather, .butterfly {
   font-size: 3.5rem;
   margin-top: auto;
 }
@@ -130,17 +134,21 @@ header {
   align-items: center;
   margin: 2em auto;
   gap: 0.75em;
-  width: 200px;
+  width: 250px;
+  padding-bottom: 2em;
 }
+
 
 .sound {
   background-color: var(--pink);
   border-radius: 16px;
   width: 28%;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 0;
-  padding:  6px 10px;
+  padding:  6px;
   cursor: pointer;
 }
 
@@ -154,6 +162,7 @@ header {
   width: 30px; 
   padding: 6px 0;
 }
+
 
 footer {
   font-size: 0.8rem;

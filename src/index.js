@@ -6,10 +6,12 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import PhaseTwo from './components/PhaseTwo';
 import PhaseThree from "./components/PhaseThree"
+import PhaseFive from "./components/PhaseFive"
 import PhaseTwoQuiz from "./components/PhaseTwoQuiz"
 import MatchingGame from "./components/MatchingGame"
 import SpellingGame from "./components/SpellingGame"
 import SpellingGame2 from "./components/SpellingGame2..js"
+import SpellingGame3 from "./components/SpellingGame3"
 import Games from "./components/Games"
 import PointsProvider  from './components/PointsProvider';
 import ReadingGame from "./components/ReadingGame"
@@ -21,12 +23,14 @@ render(
           <Route path="/" element={<App />} />
           <Route path="phaseTwo" element={<PhaseTwo />} />
           <Route path="phaseThree" element={<PhaseThree />} />
+          <Route path="phaseFive" element={<PhaseFive />} />
           <Route path="games" element={<Games />} />
           <Route path="games/phaseTwoQuiz" element={<PhaseTwoQuiz />} />
           <Route path="games/matchingGame" element={<MatchingGame />} />
           <Route path="games/spellingGame" element={<SpellingGame />} />
           <Route path="games/readingGame" element={<ReadingGame />} />
           <Route path="games/spellingGame2" element={<SpellingGame2 />} />
+          <Route path="games/spellingGame3" element={<SpellingGame3 />} />
        </Routes>
        </PointsProvider>
   </BrowserRouter>,
