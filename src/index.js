@@ -16,6 +16,7 @@ import Games from "./components/Games"
 import PointsProvider  from './components/PointsProvider';
 import ReadingGame from "./components/ReadingGame"
 import ReadingGame2 from "./components/ReadingGame2"
+import YesNoGame from "./components/YesNoGame"
 
 render(
   <BrowserRouter>
@@ -33,6 +34,7 @@ render(
           <Route path="games/spellingGame2" element={<SpellingGame2 />} />
           <Route path="games/spellingGame3" element={<SpellingGame3 />} />
           <Route path="games/readingGame2" element={<ReadingGame2 />} />
+          <Route path="games/yesNoGame" element={<YesNoGame />} />
        </Routes>
        </PointsProvider>
   </BrowserRouter>,

@@ -443,11 +443,11 @@ transform: scale(1.1);
   .spelling-sounds {
     display: flex;
     flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5em auto 1em;
-  gap: 0.75em;
-  width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em auto 1em;
+    gap: 0.75em;
+    width: 200px;
   }
 
   /* =================== READING GAME =================== */
@@ -474,3 +474,32 @@ transform: scale(1.1);
     justify-content: center;
     align-items: center;
   }
+
+  /* =================== YES NO GAME =================== */
+
+
+.yesno-question {
+  font-size: 1.725rem;
+  font-weight: 500;
+  background-color: var(--light-blue);
+  color: black;
+  padding: 0.5em;
+  border-radius: 16px;
+}
+
+.yesno-answers {
+  border-radius: 16px;
+  padding: 0.5em;
+  width: 30%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.yesno-true {
+  background-color: var(--yellow);
+  color: black;
+}
+
+.yesno-false {
+ background-color: var(--pink);
+}

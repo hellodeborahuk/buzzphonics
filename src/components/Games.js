@@ -52,6 +52,12 @@ const Games = () => {
                         <p>Phase 5</p>
                    </div>
                   </Link>
+                  <Link to="yesNoGame">
+                  <div className="games-button three">
+                        <h2>Yes or No Game</h2>
+                        <p>Phase 5</p>
+                   </div>
+                  </Link>
                   <Points />
         </section>
      );
