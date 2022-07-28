@@ -46,6 +46,12 @@ const Games = () => {
                         <p>Phase 5</p>
                    </div>
                   </Link>
+                  <Link to="readingGame2">
+                  <div className="games-button two">
+                        <h2>Reading Game 2</h2>
+                        <p>Phase 5</p>
+                   </div>
+                  </Link>
                   <Points />
         </section>
      );
