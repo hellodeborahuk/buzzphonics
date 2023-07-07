@@ -1,30 +1,30 @@
 # How to Contribute
 
-- Take a look at the existing [Issues](https://github.com/hellodeborahuk/phonics-sounds/issues) or create a new issue.
-- [Fork the Repo](https://github.com/hellodeborahuk/phonics-sounds/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
+- Take a look at the existing [Issues](https://github.com/hellodeborahuk/buzzphonics/issues) or create a new issue.
+- [Fork the Repo](https://github.com/hellodeborahuk/buzzphonics/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
 - Create a pull request.
 - Add screenshots or screen captures to your Pull Request to help me understand the effects of the changes proposed in your PR.
 
 ## HOW TO MAKE A PULL REQUEST:
 
-**1.** Start by making a fork the [**phonics-sounds**](https://github.com/hellodeborahuk/phonics-sounds) repository. Click on the <a href="https://github.com/hellodeborahuk/phonics-sounds/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
+**1.** Start by making a fork the [**buzzphonics**](https://github.com/hellodeborahuk/buzzphonics) repository. Click on the <a href="https://github.com/hellodeborahuk/phonics-sounds/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
 **2.** Clone your new fork of the repository:
 
 ```bash
-git clone https://github.com/<your-github-username>/phonics-sounds
+git clone https://github.com/<your-github-username>/buzzphonics
 ```
 
 **3.** Set upstream command:
 
 ```bash
-git remote add upstream https://github.com/hellodeborahuk/phonics-sounds.git
+git remote add upstream https://github.com/hellodeborahuk/buzzphonics.git
 ```
 
 **4.** Navigate to the new project directory:
 
 ```bash
-cd LinkFree
+cd buzzphonics
 ```
 
 **5.** Create a new branch:
